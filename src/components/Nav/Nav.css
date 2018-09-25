@@ -1,0 +1,19 @@
+
+
+section.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+}
+nav {
+  width:
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+
+nav li a {padding: 0 15px}

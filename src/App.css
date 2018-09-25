@@ -1,0 +1,17 @@
+body {
+  overflow-x: hidden;
+  padding: 70px 0 0 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+section {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width:1280px) {
+
+}

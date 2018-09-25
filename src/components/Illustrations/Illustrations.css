@@ -1,0 +1,17 @@
+
+.illustrations {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: 0.7s ease .03s;
+  max-height: 80vh
+}
+
+.illustrations li img {
+  max-width: 1000px;
+  max-height: 80vh
+}
+
+.imageDescription{ display: none}
