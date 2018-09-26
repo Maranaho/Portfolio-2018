@@ -1,0 +1,12 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+footer section {
+  width: 1000px;
+  margin: 0 auto;
+}

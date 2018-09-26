@@ -7,6 +7,8 @@ class Illustrations extends Component {
   constructor(){
     super()
     this.handleImgClick = this.handleImgClick.bind(this)
+    this.handleMDown = this.handleMDown.bind(this)
+    this.handleMUp = this.handleMUp.bind(this)
     this.state = {
       description:Images[0].title,
       hasScroll: false,
@@ -29,6 +31,20 @@ class Illustrations extends Component {
     } else { this.setState({hasScroll:true}) }
   }
 
+  handleMDown(e){
+    this.setState({start:e.clientX})
+  }
+
+  handleMUp(e){
+    let s = this.state
+    let move
+    if (s.start && s.pos <= 50) {
+      move = (s.pos - s.start + e.clientX)
+      if (move > 50) { move = 50 }
+      this.setState({pos:move})
+    }
+  }
+
   render(){
     let folder = 'img/'
     return (
@@ -37,6 +53,8 @@ class Illustrations extends Component {
           id="illusList"
           style={{transform:'translateX('+this.state.pos+'px)'}}
           onWheel={this.handleImgClick}
+          onDragStart ={this.handleMDown}
+          onDragEnd ={this.handleMUp}
           className="illustrations">{Images
           .map(i => {
             return (
