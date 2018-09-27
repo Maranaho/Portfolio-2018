@@ -20,11 +20,13 @@ main.illus {
   margin: 0;
   transition: 0.7s ease .03s;
   max-height: 60vh;
+  cursor: grab;
 }
 
 .illustrations li img {
   max-width: 1000px;
-  max-height: 60vh
+  max-height: 60vh;
+  cursor: pointer;
 }
 
 .imageDescription{ display: none}
@@ -39,6 +41,10 @@ main.illus {
   z-index: 2;
   top: 0;
   cursor: pointer;
+}
+.NextPrv button[disabled] {
+  opacity: .2;
+  cursor: not-allowed;
 }
 .NextPrv button#prv { left: 60px }
 .NextPrv button#nxt { right: 60px }

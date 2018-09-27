@@ -22,7 +22,7 @@
 .repos > li {
   width: 305px;
   border: 1px solid #aaa;
-  padding: 50px;
+  padding: 20px;
   box-sizing: border-box;
   margin: 15px 15px 15px 0;
 }

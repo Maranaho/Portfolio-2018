@@ -16,7 +16,8 @@ class Illustrations extends Component {
       listWidth:5000,
       showCompactStatusBar: false,
       itm1st: true,
-      itmlast: false
+      itmlast: false,
+      vw: window.innerWidth,
     }
 
     this.handleWheel = this.handleWheel.bind(this)
@@ -30,28 +31,30 @@ class Illustrations extends Component {
 
 
 
-
-
-  handleWheel(e){
+  lastFewItems(){
     let lastFewItems = 0
     const
     s = this.state,
-    p = s.pos,
+    lgn = s.listLength,
     listElt = document.getElementById('illusList'),
     list = Array.from(listElt.children),
-    lgn = s.listLength,
-    vw = window.innerWidth,
-    itmOnScreen = Math.round(vw/(s.listWidth/lgn));
+    itmOnScreen = Math.round(s.vw/(s.listWidth/s.listLength));
     for (let i = 0; i < itmOnScreen; i++) {
       lastFewItems = lastFewItems + list[lgn - (i+1)].clientWidth
     }
+    return lastFewItems
+  }
 
-    //@TODO Maybe this belongs in the state
 
+  handleWheel(e){
+    const
+    s = this.state,
+    p = s.pos,
+    lastFewItems = this.lastFewItems();
 
     if (p >= -(s.listWidth - lastFewItems)) {
       let move = s.pos + -e.deltaY
-      if (this.state.hasScroll) {
+      if (s.hasScroll) {
         if (p < 50  || e.deltaY === 100) {
           if (move > 50) {move = 50}
           this.setState({pos:move})
@@ -67,10 +70,8 @@ class Illustrations extends Component {
     let move
     if (s.start && s.pos <= 50) {
       move = (s.pos - s.start + e.clientX)
-      console.log(move);
       if (move >= 50) { move = 50 }
-      if (move <= 50) { move = 50 }
-      this.setState({pos:move})
+      this.noFurther(s,move,s.pos)
     }
   }
 
@@ -81,7 +82,7 @@ class Illustrations extends Component {
     s = this.state,
     itm = s.listWidth / s.listLength
     if (nxt) { move = s.pos - itm } else { move = s.pos + itm }
-    this.setState({pos:move})
+    this.noFurther(s,move,s.pos)
   }
 
   setProperWidth(){
@@ -94,13 +95,29 @@ class Illustrations extends Component {
     }
   }
 
+  noFurther(s,m,p){
+    let itm1st = false; let itmlast = false;
+    if (m <= -(s.listWidth - this.lastFewItems())) {
+      m = -(s.listWidth - this.lastFewItems())
+      itmlast = true
+    }
+    if (m > 50) {
+      m = 50
+      itm1st = true
+    }
+    this.setState({ pos:m, itm1st, itmlast })
+  }
+
   render(){
     const
     folder = 'img/',
     s = this.state;
     return (
       <main className="illus">
-        <NextPrv handleNxtPrv={this.handleNxtPrv}/>
+        <NextPrv
+          itm1st={s.itm1st}
+          itmlast={s.itmlast}
+          handleNxtPrv={this.handleNxtPrv}/>
         <ul
           id="illusList"
           style={{transform:'translateX('+s.pos+'px)',width: s.listWidth}}
@@ -119,6 +136,7 @@ class Illustrations extends Component {
                 name={i.name}/>
               )
           })}
+          <li><button onClick={()=>this.setState({pos:50,itm1st:true,itmlast:false})}>Go back</button></li>
         </ul>
         <p className="imageDescription">{s.description}</p>
       </main>
