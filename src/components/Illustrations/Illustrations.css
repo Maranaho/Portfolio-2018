@@ -1,3 +1,16 @@
+main.illus {
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 .illustrations {
   display: flex;
@@ -6,12 +19,26 @@
   padding: 0;
   margin: 0;
   transition: 0.7s ease .03s;
-  max-height: 80vh
+  max-height: 60vh
 }
 
 .illustrations li img {
   max-width: 1000px;
-  max-height: 80vh
+  max-height: 60vh
 }
 
 .imageDescription{ display: none}
+
+.NextPrv {
+  position: absolute;
+  width: 100vw;
+  top: 50vh;
+}
+.NextPrv button {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  cursor: pointer;
+}
+.NextPrv button#prv { left: 60px }
+.NextPrv button#nxt { right: 60px }

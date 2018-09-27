@@ -1,16 +1,11 @@
-
-
 section.nav {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-
+  z-index: 1;
 }
-nav {
-  width: 1000px;
-  margin: 0 auto;
-}
+nav { margin: 0 auto }
 nav ul {
   display: flex;
   list-style: none;
@@ -18,3 +13,7 @@ nav ul {
 }
 
 nav li a {padding: 0 15px}
+
+@media (min-width:1000px){
+  nav{width: 1000px}
+}

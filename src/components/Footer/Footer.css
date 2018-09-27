@@ -3,10 +3,15 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
 
 
 footer section {
   width: 1000px;
   margin: 0 auto;
+}
+
+@media (min-width:1000px){
+  footer section {width: 1000px}
 }
