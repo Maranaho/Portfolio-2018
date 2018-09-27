@@ -26,7 +26,7 @@ class GetRepos extends Component {
           id: r.id,
           name: r.name,
           date: r.created_at,
-          url: r.url,
+          url: r.html_url,
           clone: r.clone_url,
           description: r.description,
           topics:[]
