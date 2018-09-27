@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Frontend from './Frontend'
 import GetRepos from './GetRepos'
+import './Frontend.css'
 
 class Github extends Component {
   render(){

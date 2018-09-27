@@ -4,7 +4,9 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100%;
+  font-size: 12px;
 }
+ul {list-style: none}
 
 section {
   width: 1280px;

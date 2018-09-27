@@ -1,0 +1,28 @@
+.repos > li ul,
+#filters {
+  display: flex;
+  padding: 0;
+}
+.repos > li li,
+#filters li {
+  padding: 3px 15px;
+  cursor: pointer;
+  border-radius: 50px;
+  background: #e9f9f8;
+  color: #157c76;
+}
+
+#filters li:not(:first-child) {margin-left: 15px}
+
+.repos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.repos > li {
+  width: 305px;
+  border: 1px solid #aaa;
+  padding: 50px;
+  box-sizing: border-box;
+  margin: 15px 15px 15px 0;
+}

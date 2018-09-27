@@ -90,7 +90,7 @@ class GetRepos extends Component {
       }
 
       return (
-        <main>
+        <section>
           <Filters filter={this.filterRepos.bind(this)} filters={s.filters} sort={this.sortTopics}/>
           <ul className="repos">
             {items.map(r => <Repo
@@ -105,7 +105,7 @@ class GetRepos extends Component {
               copyFn={this.copyFn}
               url={r.url} />)}
           </ul>
-        </main>
+        </section>
       )
     } else {return null}
   }}

@@ -1,3 +1,3 @@
 import React from 'react';
-const Frontend = () => <div>Frontend</div>
+const Frontend = () => <section>Frontend</section>
 export default Frontend;
