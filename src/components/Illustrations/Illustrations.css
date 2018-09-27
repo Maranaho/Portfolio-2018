@@ -19,7 +19,7 @@ main.illus {
   padding: 0;
   margin: 0;
   transition: 0.7s ease .03s;
-  max-height: 60vh
+  max-height: 60vh;
 }
 
 .illustrations li img {
