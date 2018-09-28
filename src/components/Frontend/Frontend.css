@@ -1,26 +1,33 @@
 .repos > li ul,
 #filters {
   display: flex;
-  padding: 0;
+  padding: 10px 0;
 }
-.repos > li li,
+
 #filters li {
   padding: 3px 15px;
   cursor: pointer;
   border-radius: 50px;
-  box-shadow: 0 0 0 1px #ddd;
+  border: 1px solid rgb(221, 232, 241);
+  color: #797979;
   transition: .3s ease;
 
 }
 #filters li.selected {
-  box-shadow: none;
+  border-color: #3bd9d0;
   background: #3bd9d0;
   color: #fff;
 }
 
 .repos > li li:not(:first-child),
-#filters li:not(:first-child) {margin-left: 15px}
+#filters li:not(:first-child) {margin-left: 5px}
 
+.repos > li li {
+  border-radius: 50px;
+  background: rgba(59, 217, 208, 0.1);
+  color: #3bd9d0;
+  padding: 0 10px;
+}
 .repos {
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +35,9 @@
 }
 .repos > li {
   width: 305px;
-  border: 1px solid #aaa;
+  border-radius: 6px;
+  box-shadow: -1px 1px 0 rgba(232, 245, 255, 0.5);
+  background: #fff;
   padding: 20px;
   box-sizing: border-box;
   margin: 15px 15px 15px 0;

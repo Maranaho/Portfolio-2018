@@ -1,0 +1,51 @@
+/*
+
+developped with love by Maranaho N'GUESSAN
+
+ __    __   ______   ______   ______   __   __   ______   __  __   ______
+/\ "-./  \ /\  __ \ /\  == \ /\  __ \ /\ "-.\ \ /\  __ \ /\ \_\ \ /\  __ \
+\ \ \-./\ \\ \  __ \\ \  __< \ \  __ \\ \ \-.  \\ \  __ \\ \  __ \\ \ \/\ \
+ \ \_\ \ \_\\ \_\ \_\\ \_\ \_\\ \_\ \_\\ \_\\"\_\\ \_\ \_\\ \_\ \_\\ \_____\
+  \/_/  \/_/ \/_/\/_/ \/_/ /_/ \/_/\/_/ \/_/ \/_/ \/_/\/_/ \/_/\/_/ \/_____/.com
+
+
+*/
+
+@font-face {
+	font-family: 'xtra';
+	src: url('./fonts/mosk/MoskUltra-Bold900.eot');
+	src: url('./fonts/mosk/MoskUltra-Bold900.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/mosk/MoskUltra-Bold900.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+
+@font-face {
+	font-family: 'bold';
+	src: url('./fonts/mosk/MoskBold700.eot');
+	src: url('./fonts/mosk/MoskBold700.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/mosk/MoskBold700.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'reg';
+	src: url('./fonts/mosk/MoskExtra-Light200.eot');
+	src: url('./fonts/mosk/MoskExtra-Light200.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/mosk/MoskExtra-Light200.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+.xtra{font-family: 'xtra'}
+.bold{font-family: 'bold'}
+.uppercase{text-transform: uppercase}
+.italic{font-style: italic}
+.t1{font-size: 2em}
+.t2{font-size: 1.5em}
+.t3{font-size: .8em}

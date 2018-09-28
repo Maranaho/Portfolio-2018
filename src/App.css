@@ -1,10 +1,13 @@
 body {
   overflow-x: hidden;
-  padding: 70px 0 0 0;
+  padding: 40px 0 0 0;
   margin: 0;
   box-sizing: border-box;
   height: 100%;
   font-size: 12px;
+  background: rgba(232, 245, 255, 0.1);
+  font-family: 'reg';
+  letter-spacing: .03em;
 }
 ul {list-style: none}
 
@@ -13,6 +16,21 @@ section {
   margin: 0 auto;
   position: relative;
 }
+
+a {
+  text-decoration: none;
+  color: #0dd4b8;
+}
+
+input[type="text"] {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: .8em;
+  padding: 3px 0;
+}
+
+
 
 @media (min-width:1280px) {
 

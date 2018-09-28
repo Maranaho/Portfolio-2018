@@ -6,10 +6,11 @@ import Filters from './Filters'
 class GetRepos extends Component {
   constructor(){
     super()
-    this.state = {}
+    this.state = {allOut:'selected'}
     this.tempState = {
       repos :[],
-      filters:[]
+      filters:[],
+      filtersClassNames:[]
     }
 
   }
@@ -49,16 +50,17 @@ class GetRepos extends Component {
     .then( topics => {
         let t = topics.names
         this.tempState.repos[idx].topics = t
-        this.uniqArr(t,this.tempState.filters)
+        this.uniqArr(t,this.tempState.filters,this.tempState.filtersClassNames)
         this.setState(this.tempState)
     })
     .catch(err => console.error(err))
   }
 
-  uniqArr(arr,targ){
+  uniqArr(arr,targ,css){
     arr.forEach(itm => {
       if (targ.indexOf(itm) === -1) {
-        targ.push({name:itm,className:null})
+        targ.push(itm)
+        css.push(null)
       }
     })
   }
@@ -74,12 +76,30 @@ class GetRepos extends Component {
   }
 
   setActive(e){
-    e = e.target.id
-    if (e === 'All') {
-      this.displayAll()
-      //@TODO set active state for the list
-    } else {
+    e = e.target
+    let css = []
+    let idx = Number(e.getAttribute('idx'))
+    this.state.filtersClassNames.forEach(cn=>css.push(cn))
 
+    if (e.id === 'all') {
+      if (this.state.allOut === 'selected') {
+        this.setState({tags: false})
+      } else {
+        this.setState({
+          tags: false,
+          allOut:'selected',
+          filtersClassNames: css
+        })
+      }
+    } else {
+      //@TODO finish this active thing
+      if (css[idx] === 'selected') {
+        css.splice(idx, 1, null);
+      } else {
+        css.splice(idx, 1, 'selected');
+      }
+      console.log(css);
+      this.setState({allOut:null,filtersClassNames: css})
     }
   }
 
@@ -102,9 +122,7 @@ class GetRepos extends Component {
    this.setState({tags: filteredRepos})
   }
 
-  displayAll(){
-    this.setState({tags: false})
-  }
+
 
   searchBlur(e){
     if (e.target.value === '') {
@@ -146,6 +164,8 @@ class GetRepos extends Component {
           <Filters
             filter={this.filterRepos.bind(this)}
             filters={s.filters}
+            css={s.filtersClassNames}
+            allOut={s.allOut}
             sort={this.handleFilterClick.bind(this)}/>
           <ul className="repos">
             {items.map(r => <Repo
