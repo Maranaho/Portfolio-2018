@@ -8,10 +8,17 @@
   padding: 3px 15px;
   cursor: pointer;
   border-radius: 50px;
-  background: #e9f9f8;
-  color: #157c76;
+  box-shadow: 0 0 0 1px #ddd;
+  transition: .3s ease;
+
+}
+#filters li.selected {
+  box-shadow: none;
+  background: #3bd9d0;
+  color: #fff;
 }
 
+.repos > li li:not(:first-child),
 #filters li:not(:first-child) {margin-left: 15px}
 
 .repos {

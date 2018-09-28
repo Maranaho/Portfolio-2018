@@ -11,6 +11,7 @@ class GetRepos extends Component {
       repos :[],
       filters:[]
     }
+
   }
 
   componentWillMount(){
@@ -57,7 +58,7 @@ class GetRepos extends Component {
   uniqArr(arr,targ){
     arr.forEach(itm => {
       if (targ.indexOf(itm) === -1) {
-        targ.push(itm)
+        targ.push({name:itm,className:null})
       }
     })
   }
@@ -72,26 +73,80 @@ class GetRepos extends Component {
     this.setState({filter: e.target.value})
   }
 
-  sortTopics(e){
-    console.log(e.target);
+  setActive(e){
+    e = e.target.id
+    if (e === 'All') {
+      this.displayAll()
+      //@TODO set active state for the list
+    } else {
+
+    }
   }
+
+  handleFilterClick(e){
+    this.sortTopics(e)
+    this.setActive(e)
+  }
+
+  sortTopics(e){
+    const s = this.state;
+    e = e.target.id
+    let filteredRepos = []
+
+    s.repos.forEach(r=>
+      r.topics.forEach((t,i) =>{
+          if (t === e) { filteredRepos.push(r.name)}
+        }
+      )
+    )
+   this.setState({tags: filteredRepos})
+  }
+
+  displayAll(){
+    this.setState({tags: false})
+  }
+
+  searchBlur(e){
+    if (e.target.value === '') {
+      this.setState({reset:true})
+      console.log('hey');
+    }
+  }
+
 
   render(){
     let s = this.state
 
     if (s.repos) {
       let items = s.repos
+      if (s.reset) { items = s.repos}
 
-      if (this.state.filter) {
-        items = items.filter( item =>
-          item.name.toLowerCase()
-          .includes(this.state.filter.toLowerCase())
+      if (s.tags) {
+        items = s.repos
+        let tagged = []
+        items.forEach( i => {
+          s.tags.forEach(t=> { if (t === i.name) {
+              tagged.push(i)
+            }
+          })
+        })
+        items = tagged
+      }
+
+      if (s.filter) {
+        items = s.repos
+        items = items.filter( items =>
+          items.name.toLowerCase()
+          .includes(s.filter.toLowerCase())
         )
       }
 
       return (
         <section>
-          <Filters filter={this.filterRepos.bind(this)} filters={s.filters} sort={this.sortTopics}/>
+          <Filters
+            filter={this.filterRepos.bind(this)}
+            filters={s.filters}
+            sort={this.handleFilterClick.bind(this)}/>
           <ul className="repos">
             {items.map(r => <Repo
               key={r.id}
