@@ -34,7 +34,7 @@ class GetRepos extends Component {
           url: r.html_url,
           clone: r.clone_url,
           description: r.description,
-          topics:[]
+          topics: []
         }
         this.tempState.repos.push(repo)
       })
@@ -52,14 +52,20 @@ class GetRepos extends Component {
     topics(Secrets.username +'/'+repo, options)
     .then( topics => {
         let t = topics.names
-        this.tempState.repos[idx].topics = t
+        this.tempState.repos[idx].topics = this.arrToObj(t)
         this.uniqArr(t,this.tempState.filters,this.tempState.filtersClassNames)
         this.tempState.repos[idx].topicsLength = this.tempState.repos[idx].topics.length
         this.setState(this.tempState)
     })
     .catch(err => console.error(err))
   }
-
+  arrToObj(topics){
+    let newTopics = []
+    topics.forEach(t=> {
+      newTopics.push({name:t,css:'filterOn'})
+    })
+    return newTopics
+  }
   uniqArr(arr,targ,css){
     arr.forEach(itm => {
       if (targ.indexOf(itm) === -1) {
@@ -117,19 +123,32 @@ class GetRepos extends Component {
     id = e.target.id,
     filterWasOn = e.target.classList.contains('selected');
     let ns = s;
+    let tags = []
+    if (s.tags) { tags=s.tags }
+    else {  s.repos.map(r=>localPushTags(tags,r.name)) }
+    function localPushTags(arr,repoName) { arr.push(repoName) }
 
     s.repos.forEach((r,repoIdx)=>{
       let
       l = r.topicsLength;
-      r.topics.forEach(t=>{
-        if (id === t) {
-          if (filterWasOn) { l = l - 1 }
-          else {l = l + 1}
-          ns.repos[repoIdx].topicsLength = l
-          this.setState(ns)
-          if (ns.repos[repoIdx].topicsLength === 0) {
-            console.log(r.name+' is gone');
+      r.topics.forEach((t,topicIdx)=>{
+        if (id === t.name) {
+          if (filterWasOn) {
+            ns.repos[repoIdx].topics[topicIdx].css = ''
+            l = l - 1
+          } else {
+            if (ns.repos[repoIdx].topicsLength === 0) {
+              tags.push(r.name)
+            }
+            ns.repos[repoIdx].topics.css = 'filterOn'
+            l = l + 1
           }
+          ns.repos[repoIdx].topicsLength = l
+          if (ns.repos[repoIdx].topicsLength === 0) {
+            tags.splice(tags.indexOf(r.name),1)
+          }
+          ns.tags=tags
+          this.setState(ns)
         }
       })
     })
@@ -152,7 +171,6 @@ class GetRepos extends Component {
     if (s.repos) {
       let items = s.repos
       if (s.reset) { items = s.repos}
-
       if (s.tags) {
         items = s.repos
         let tagged = []
