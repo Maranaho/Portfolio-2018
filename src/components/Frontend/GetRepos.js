@@ -6,7 +6,10 @@ import Filters from './Filters'
 class GetRepos extends Component {
   constructor(){
     super()
-    this.state = {allOut:'selected'}
+    this.state = {
+      allOut:'selected',
+      filteredRepos:[]
+    }
     this.tempState = {
       repos :[],
       filters:[],
@@ -51,6 +54,7 @@ class GetRepos extends Component {
         let t = topics.names
         this.tempState.repos[idx].topics = t
         this.uniqArr(t,this.tempState.filters,this.tempState.filtersClassNames)
+        this.tempState.repos[idx].topicsLength = this.tempState.repos[idx].topics.length
         this.setState(this.tempState)
     })
     .catch(err => console.error(err))
@@ -60,7 +64,7 @@ class GetRepos extends Component {
     arr.forEach(itm => {
       if (targ.indexOf(itm) === -1) {
         targ.push(itm)
-        css.push(null)
+        css.push('selected')
       }
     })
   }
@@ -81,10 +85,12 @@ class GetRepos extends Component {
     let idx = Number(e.getAttribute('idx'))
     this.state.filtersClassNames.forEach(cn=>css.push(cn))
 
+
     if (e.id === 'all') {
       if (this.state.allOut === 'selected') {
         this.setState({tags: false})
       } else {
+        css.forEach((c,i)=>css[i] = null)
         this.setState({
           tags: false,
           allOut:'selected',
@@ -92,13 +98,11 @@ class GetRepos extends Component {
         })
       }
     } else {
-      //@TODO finish this active thing
       if (css[idx] === 'selected') {
         css.splice(idx, 1, null);
       } else {
         css.splice(idx, 1, 'selected');
       }
-      console.log(css);
       this.setState({allOut:null,filtersClassNames: css})
     }
   }
@@ -109,17 +113,27 @@ class GetRepos extends Component {
   }
 
   sortTopics(e){
-    const s = this.state;
-    e = e.target.id
-    let filteredRepos = []
+    const s = this.state,
+    id = e.target.id,
+    filterWasOn = e.target.classList.contains('selected');
+    let ns = s;
 
-    s.repos.forEach(r=>
-      r.topics.forEach((t,i) =>{
-          if (t === e) { filteredRepos.push(r.name)}
+    s.repos.forEach((r,repoIdx)=>{
+      let
+      l = r.topicsLength;
+      r.topics.forEach(t=>{
+        if (id === t) {
+          if (filterWasOn) { l = l - 1 }
+          else {l = l + 1}
+          ns.repos[repoIdx].topicsLength = l
+          this.setState(ns)
+          if (ns.repos[repoIdx].topicsLength === 0) {
+            console.log(r.name+' is gone');
+          }
         }
-      )
-    )
-   this.setState({tags: filteredRepos})
+      })
+    })
+
   }
 
 
@@ -169,6 +183,7 @@ class GetRepos extends Component {
             sort={this.handleFilterClick.bind(this)}/>
           <ul className="repos">
             {items.map(r => <Repo
+              lgh={r.topicsLength}
               key={r.id}
               id={r.id}
               topics={r.topics}

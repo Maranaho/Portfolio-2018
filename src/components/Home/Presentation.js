@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Presentation = () => (
-  <div>Presentation</div>
+  <main><section><h1 className="t1 uppercase">Presentation</h1></section></main>
 );
 
 export default Presentation;

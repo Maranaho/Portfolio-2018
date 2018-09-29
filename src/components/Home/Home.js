@@ -4,11 +4,11 @@ import Presentation from './Presentation';
 import Resume from './Resume';
 
 const Home = () => (
-  <main>
+  <div>
     <Hero/>
     <Presentation/>
     <Resume/>
-  </main>
+  </div>
 );
 
 export default Home;
