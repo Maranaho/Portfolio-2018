@@ -88,20 +88,23 @@ class GetRepos extends Component {
   setActive(e){
     e = e.target
     let css = []
+    let tags = []
+    let ns = this.state
     let idx = Number(e.getAttribute('idx'))
     this.state.filtersClassNames.forEach(cn=>css.push(cn))
 
 
     if (e.id === 'all') {
-      if (this.state.allOut === 'selected') {
-        this.setState({tags: false})
-      } else {
-        css.forEach((c,i)=>css[i] = null)
-        this.setState({
-          tags: false,
-          allOut:'selected',
-          filtersClassNames: css
+      if (this.state.allOut !== 'selected') {
+        ns.repos.forEach(r=>{
+          tags.push(r.name)
+          r.topicsLength = r.topics.length
         })
+        css.forEach((c,i)=>css[i] = 'selected')
+        ns.tags = tags
+        ns.allOut = 'selected'
+        ns.filtersClassNames = css
+        this.setState(ns)
       }
     } else {
       if (css[idx] === 'selected') {
@@ -140,7 +143,7 @@ class GetRepos extends Component {
             if (ns.repos[repoIdx].topicsLength === 0) {
               tags.push(r.name)
             }
-            ns.repos[repoIdx].topics.css = 'filterOn'
+            ns.repos[repoIdx].topics[topicIdx].css = 'filterOn'
             l = l + 1
           }
           ns.repos[repoIdx].topicsLength = l
