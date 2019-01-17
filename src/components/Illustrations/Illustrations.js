@@ -110,7 +110,7 @@ class Illustrations extends Component {
 
   render(){
     const
-    folder = 'img/',
+    folder = 'img/illus/',
     s = this.state;
     return (
       <main className="illus">

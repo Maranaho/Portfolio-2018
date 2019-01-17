@@ -12,7 +12,12 @@ nav ul {
   justify-content: flex-end;
 }
 
-nav li a {padding: 0 15px}
+nav li a {
+  padding: 0 15px;
+  color: #3c3f50;
+  transition: .2s ease;
+}
+nav li a:hover { color: #0dd4b8 }
 
 @media (min-width:1000px){
   nav{width: 1000px}

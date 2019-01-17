@@ -12,7 +12,7 @@ class Main extends Component {
 
   render(){
     return (
-      <div>
+      <main>
         <Nav/>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -22,7 +22,7 @@ class Main extends Component {
           <Route exact path="/github/repo/:id" component={Repo} />
         </Switch>
         <Footer/>
-      </div>
+      </main>
     )
   }
 }

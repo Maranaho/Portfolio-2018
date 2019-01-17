@@ -1,0 +1,13 @@
+main.homeBGVidCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.homeBGVid { transition: .2s ease 0 }
+
+video {
+  width: 100%;
+  /*display: none;*/
+}
