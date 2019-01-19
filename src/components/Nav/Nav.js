@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Nav.css'
-const Nav = () => (
-  <section className="nav">
+const Nav = (p) => (
+  <section id="nav" className={p.top ? 'top' : ''}>
     <nav>
       <ul>
         <li><Link to="/">Home</Link></li>

@@ -6,8 +6,3 @@ main.homeBGVidCtn {
 }
 
 .homeBGVid { transition: .2s ease 0 }
-
-video {
-  width: 100%;
-  /*display: none;*/
-}

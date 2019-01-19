@@ -1,3 +1,66 @@
 #presentation {
-  height: 90vh;
+  height: 100vh;
+  background: url('/img/theme/presentation.jpg') no-repeat center  top;
+}
+
+#presentation h2 {
+  text-align: right;
+  line-height: 85px;
+  font-size: 80px;
+}
+#presentation h2 span {
+  background: url('/img/theme/grungy_blue_txt.png');
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: rgba(255,255,255,0);
+  letter-spacing: -1px;
+  display: block;
+}
+
+#presentation h2 span:nth-last-of-type(1) { transform: translateX(-260px)}
+#presentation h2 strong {
+  font-family: 'holiday';
+  background: url('/img/theme/grungy_txt.png');
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: rgba(255,255,255,0);
+  transform: translate(50px,-110px);
+  line-height: normal;
+  display: inline-block;
+  padding: 0 50px;
+  font-weight: 100;
+  font-size: 85px;
+}
+
+#presentation header {
+  display: flex;
+  width: 800px;
+  padding-top: 90px;
+  transform: translateX(-60px);
+}
+#presentation header p {
+  font-size: 13px;
+  line-height: 19px;
+  width: 200px;
+  letter-spacing: -.2px;
+}
+#presentation header strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+#presentation header p:nth-of-type(1) {
+  padding:  0 20px 0 35px;
+  transform: translateY(-20px);
+}
+#presentation header p:nth-of-type(2) {
+  transform: translateY(0);
+}
+
+
+@media(max-width: 1140px){
+  #presentation {
+    background-position: center center !important;
+    background-size: cover;
+  }
 }

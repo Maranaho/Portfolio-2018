@@ -41,7 +41,34 @@ developped with love by Maranaho N'GUESSAN
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'thin';
+	src: url('./fonts/mosk/MoskThin100.eot');
+	src: url('./fonts/mosk/MoskThin100.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/mosk/MoskThin100.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'md';
+	src: url('./fonts/mosk/MoskMedium500.eot');
+	src: url('./fonts/mosk/MoskMedium500.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/mosk/MoskMedium500.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'holiday';
+	src: url('./fonts/mosk/HolidayFreeRegular.eot');
+	src: url('./fonts/mosk/HolidayFreeRegular.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/mosk/HolidayFreeRegular.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
 
+
+.md{font-family: 'md'}
+.thin{font-family: 'thin'}
 .xtra{font-family: 'xtra'}
 .bold{font-family: 'bold'}
 .uppercase{text-transform: uppercase}

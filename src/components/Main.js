@@ -10,10 +10,40 @@ import Footer from './Footer/Footer';
 
 class Main extends Component {
 
+constructor(props) {
+  super(props)
+  this.state = {
+    navIsWhite: true
+  }
+
+    this.changeNavColor = this.changeNavColor.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
+}
+
+changeNavColor() {
+    if (window.scrollY + 100 >= window.innerHeight*2) {
+        if (this.state.navIsWhite) {
+            this.setState({navIsWhite: false})
+        }
+    } else {
+        if (!this.state.navIsWhite) {
+            this.setState({navIsWhite: true})
+        }
+    }
+}
+
+componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+}
+
+handleScroll() {
+    this.changeNavColor()
+}
+
   render(){
     return (
       <main>
-        <Nav/>
+        <Nav top={this.state.navIsWhite}/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/github" component={Github} />

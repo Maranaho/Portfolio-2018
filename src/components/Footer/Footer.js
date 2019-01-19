@@ -1,5 +1,5 @@
 import React from 'react'
 import './Footer.css'
-const Footer = () => <footer><section>Footer</section></footer>
+const Footer = () => <footer><section></section></footer>
 
 export default Footer

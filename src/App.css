@@ -3,23 +3,26 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100%;
-  font-size: 12px;
+  font-size: 14px;
   background: rgba(232, 245, 255, 0.1);
-  font-family: 'reg';
+  font-family: 'md';
   letter-spacing: .03em;
-  color: #3c3f50;
+  color: #434a55;
 }
+p { line-height: 20px }
 ul {list-style: none}
 
-section {
-  width: 1280px;
-  margin: 0 auto;
-  position: relative;
-}
+
 
 a {
   text-decoration: none;
-  color: #0dd4b8;
+  color: #12dec6;
+}
+
+button {
+  cursor: pointer;
+  color: #434a55;
+  outline: none;
 }
 
 input[type="text"] {
@@ -30,13 +33,35 @@ input[type="text"] {
   padding: 3px 0;
 }
 
-h1,h2,h3,h4 {margin: 0}
+ul,h1,h2,h3,h4 {
+    margin: 0;
+    padding: 0;
+}
+
+li::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+a::selection,
+p::selection,
+small::selection,
+button::selection,
+span::selection,
+i::selection,
+strong::selection {
+  background: rgba(42, 234, 207, 0.8);
+  color: #fff;
+}
+
 
 .pTop { padding-top: 80px }
-
-
-
-
-@media (min-width:1280px) {
-
+@media(min-width: 1140px){
+  section {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+  }
 }

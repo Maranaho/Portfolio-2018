@@ -1,6 +1,88 @@
 #header {
   height: 95vh;
-  /*background: url('/img/theme/header2019_02.jpg') center center;*/
+  background: url('/img/theme/synths_mania_hi_02.jpg') no-repeat center bottom;
+  text-align: center;
+  padding-top: 60px;
+  box-sizing: border-box;
+  color: #fff;
 }
 
-video {display: none }
+
+
+#header h1 {
+  font-family: 'holiday';
+  background: url('/img/theme/grungy_txt.png');
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: rgba(255,255,255,0);
+  font-size: 78px;
+}
+
+#header h2 {
+  font-size: 13px;
+  letter-spacing: 30px;
+  transform: translateY(-25px);
+}
+#header h3 {
+  font-size: 12px;
+  margin-top: 30px;
+  position: relative;
+}
+#header h3 span,
+#header h3 strong {
+  position: relative;
+  z-index: 1;
+}
+#header h1::selection,
+#header h2::selection,
+#header h3 span::selection,
+#header h3 strong::selection {
+  background: #3cdcff;
+  background: #fce4ed;
+  background: #ffe8cc;
+}
+#header h3 span { letter-spacing: 3px }
+#header h3 strong {
+  padding: 3px 5px;
+  background: #09fddf;
+  margin-right: 6px;
+}
+
+#header h3:before{
+  content:"";
+  width: 250px;
+  height: 1px;
+  background: rgba(255,255,255,.7);
+  position: absolute;
+  bottom: 2px;
+  left: -70px;
+}
+
+@media(max-width: 600px){
+  #header h1 { font-size: 40px}
+  #header h2 {
+    letter-spacing: 7px;
+    transform: translateY(-17px);
+  }
+}
+
+@media(max-width: 1140px){
+    #header {
+      background-position: center center !important;
+      background-size: cover;
+    }
+}
+
+
+/*<video
+  className="homeBGVid"
+  preload="metadata"
+  alt="alt"
+  poster="/img/theme/synths_mania01.jpg"
+  controlsList="nodownload"
+  muted loop autoPlay
+  style={{transform: 'translateY(' + p.vidBg*.6 + 'px'}}>
+    <source
+    type="video/mp4"
+    src="/img/theme/synths_mania01.mp4"></source >
+  </video>*/

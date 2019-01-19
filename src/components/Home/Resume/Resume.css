@@ -1,3 +1,228 @@
-#resume {
-  height: 90vh;
+
+
+
+#resume h2 { font-size: 16px }
+
+
+
+#resumeListCtn ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#resumeListCtn ul li h3 {
+    font-size: 72px;
+    line-height: 70px;
+}
+
+#resumeListCtn ul li h4 {
+    font-size: 39px;
+    font-weight: 100;
+    line-height: 34px;
+    letter-spacing: -1px;
+    opacity: .7;
+}
+
+#resumeListCtn ul li h5 {
+    display: flex;
+    margin: 0 0 20px;
+}
+#resumeListCtn ul li h5 span { font-size: 24px }
+#resumeListCtn ul li h5 small {
+    font-size: 10px;
+    transform: translate(1px,4px);
+    display: block;
+}
+
+#resumeListCtn ul li h6 {
+    font-size: 17px;
+    margin: 0 0 20px;
+}
+#resumeListCtn ul li p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 17px;
+}
+#resumeListCtn ul li hr {
+    opacity: 0;
+    margin: 2px 0;
+}
+
+#toggleSlide {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 3px;
+  background: linear-gradient(to right, #09fddf , #3cdcff);
+  border-radius: 100px;
+  padding: 5px 50px;
+  font-size: 0;
+  color: #b6bcc6;
+  box-sizing: border-box;
+  transition: .5s cubic-bezier(0.88, 0.04, 0.28, 1.02);
+  height: 25px;
+  z-index: 0;
+}
+
+/**/
+/*background: linear-gradient(to right,#fce4ed,#ffe8cc);*/
+
+
+#resumeActions {
+    display: flex;
+    padding: 20px 0 40px;
+    position: relative;
+}
+
+#toggleCmpnt {
+  position: relative;
+  background: #f8f8f8;
+  border-radius: 100px;
+  box-shadow: 1px 1px 1px rgba(188, 197, 209, .5) inset;
+  padding: 3px;
+}
+
+
+#toggleCmpnt button {
+    background: rgba(248, 247, 251,0);
+    border: none;
+    border-radius: 100px;
+    padding: 5px 20px;
+    font-size: 12px;
+    color: #b6bcc6;
+    transition: color .5s ease .2s;
+    position: relative;
+    z-index: 1;
+}
+#toggleCmpnt button#pro { padding: 5px 70px }
+
+#toggleCmpnt button.active {color: #fff}
+/*#toggleCmpnt button:not(.active):hover {opacity: .7}*/
+
+#toggleCmpnt #pro {margin-right: 20px}
+
+
+#resumeNxtPrv { margin-left: 50px}
+#resumeNxtPrv button {
+  background: #fff;
+  border: 1px solid rgba(190, 197, 210, .5);
+  padding: 7px 10px 7px 15px;
+  font-size: 13px;
+  color: #4a5c75;
+  transition: .3s ease;
+}
+#resumeNxtPrv button#prv {
+  border-radius: 50px 0 0 50px;
+}
+#resumeNxtPrv button#nxt {
+  border-radius: 0 50px 50px 0;
+  border-left: none;
+}
+#resumeNxtPrv.last button#nxt,
+#resumeNxtPrv.first button#prv {
+background: #f8f8f8;
+-webkit-box-shadow: 1px 1px 1px rgba(188, 197, 209, .5) inset;
+box-shadow: 1px 1px 1px rgba(188, 197, 209, .5) inset;
+border: 1px solid rgba(190, 197, 210, 0);
+color:#b6bcc6;
+}
+#resumeNxtPrv.last button#nxt {border-left: none}
+
+
+
+
+
+
+@media(max-width:1570px){
+  #resume{
+    padding: 50px 10%;
+    background: rgba(156, 167, 184,.03);
+  }
+  #resumeActions { display: none}
+  #resumeListCtn ul li {
+    width: 30%;
+    box-sizing: border-box;
+    padding: 40px 50px 50px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(156, 167, 184,.15);
+    margin: 15px 30px 15px 0;
+    box-sizing: border-box;
+  }
+  #resumeListCtn ul li hr { margin: 5px 0}
+  #resume h2 {
+    font-size: 70px;
+    padding-top: 50px;
+  }
+  h3.mobTitle {
+    font-weight: 100;
+    padding-top: 80px;
+  }
+  #resumeListCtn ul li h3 {
+    font-size: 30px;
+    display: inline;
+    line-height: normal;
+    margin-right: 5px;
+  }
+  #resumeListCtn ul li h4 {
+    line-height: normal;
+    display: inline;
+    font-size: 20px;
+  }
+  #resumeListCtn ul li h6 {
+    font-size: 14px;
+    margin: 5px 0 30px;
+  }
+  #resumeListCtn ul li h5 { display: none }
+}
+
+
+@media(max-width:1140px){
+  #resumeListCtn ul li {
+    width: 45%;
+    border-bottom: 1px solid rgba(67, 74, 85, 0.1);
+    margin-bottom: 20px;
+  }
+}
+@media(max-width:770px){
+  #resumeListCtn ul li { width: 100% }
+  #resume h2 {
+    font-size: 40px;
+    padding-top: 50px;
+  }
+}
+
+@media(min-width:1570px){
+  #resumeListCtn { position: relative }
+
+  #resumeListCtn ul li {
+    width: 370px;
+    box-sizing: border-box;
+    padding: 40px 30px;
+  }
+
+  #resumeListCtn ul li:first-child {
+    padding-left: 0;
+    width: calc(370px - 30px);
+  }
+  #resume {
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 200px;
+    background: url('/img/theme/resume_bg.jpg') no-repeat left top #fbfbfb;
+    background-size: 100% 100%;
+  }
+
+
+  .skillList {
+    transition: .5s ease;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #resumeListCtn.educ #pro,
+  #resumeListCtn.pro #education {
+    opacity: 0;
+  }
 }

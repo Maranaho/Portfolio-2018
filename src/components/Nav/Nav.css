@@ -1,4 +1,4 @@
-section.nav {
+section#nav {
   position: fixed;
   width: 100%;
   top: 0;
@@ -10,14 +10,20 @@ nav ul {
   display: flex;
   list-style: none;
   justify-content: flex-end;
+  padding: 20px 0;
 }
 
 nav li a {
   padding: 0 15px;
-  color: #3c3f50;
+  color: #2d343b;
   transition: .2s ease;
+  font-size: 10px;
+  text-transform: uppercase;
 }
-nav li a:hover { color: #0dd4b8 }
+nav li:last-child a {padding-right: 0 }
+nav li a:hover { color: #12dec6 }
+section#nav.top nav li a:hover,
+section#nav.top nav li a {color: rgba(255,255,255,.8)}
 
 @media (min-width:1000px){
   nav{width: 1000px}
