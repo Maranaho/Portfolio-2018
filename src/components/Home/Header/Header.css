@@ -71,6 +71,7 @@
     #header {
       background-position: center center !important;
       background-size: cover;
+      height: 100vh;
     }
 }
 

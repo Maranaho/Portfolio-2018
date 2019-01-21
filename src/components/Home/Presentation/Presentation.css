@@ -76,15 +76,21 @@
     width: inherit;
     transform: translateY(0);
     padding-top: 30px;
+    justify-content: center;
   }
   #presentation header p{display: none}
   #presentation h2{
     padding: 0 10%;
-    font-size: 60px;
-    line-height: normal;
+    font-size: 40px;
+    line-height: 35px;
+    text-align: left;
+  }
+  #presentation h2 span { display: block}
+  #presentation h2 strong {
+    background: none;
+    padding:0;
   }
   #presentation{
-    height: 150vh;
     background-size: cover;
   }
 }
