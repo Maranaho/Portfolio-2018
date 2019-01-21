@@ -6,7 +6,7 @@ const ResumeData = [
       length: 16,
       unit: 'months',
       des:'Senior Lead Frontend Engineer <a target="_blank" href="https://quickbooks.intuit.com/">@Intuit QuickBooks</a> - London, UK',
-      txt:'At Intuit I am currently the Lead frontend engineer supporting all the programming on the <a target="_blank" href="https://quickbooks.intuit.com/fr/new_home/">Intuit QuickBooks french website</a> on a contract.'
+      txt:'At Intuit I am currently the Lead frontend engineer supporting all the programming on the <a target="_blank" href="https://quickbooks.intuit.com/fr/new_home/">Intuit QuickBooks french website</a>.'
     },
     {
         year: 2016,
@@ -14,7 +14,7 @@ const ResumeData = [
         length: 9,
         unit: 'months',
         des:'Frontend development teacher <br><a target="_blank" href="http://www.mjm-design.com/ecole/nantes">@MJM Art School</a> - Nantes, FR',
-        txt:'My favourite contract so far ! back in France as a Freelancer it had become a trend among my uni friends to teach.<hr>I sounded interesting so I got in contact with one of my former Art school teacher who was now the Director of the same School but in the city I lived in then - Nantes.<hr>Long story short I was hired to be the Frontend development teacher for the whole 2016/17 school year with 27 UI design students for 4 hours every school weeks.<hr>It was amazing Iwant to go back to that !'
+        txt:'My favourite contract so far ! Back in France as a Freelancer it had become a trend among my uni friends to teach.<hr>It sounded interesting so I got in contact with one of my former Art school teacher who was now the Director of the same School but in the city I lived in then - Nantes.<hr>Long story short I was hired to be the Frontend development teacher for the whole 2016/17 school year with 27 UI design students for 4 hours every school weeks.<hr>It was amazing I want to go back to that !'
     },
     {
         year: 2015,
