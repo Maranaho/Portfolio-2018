@@ -25,3 +25,9 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+@media(max-width: 800px){
+  .scrollHeader {
+    bottom: 100px;
+  }
+}
