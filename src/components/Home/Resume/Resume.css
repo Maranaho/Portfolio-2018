@@ -234,5 +234,6 @@ color:#b6bcc6;
   #resumeListCtn.educ #pro,
   #resumeListCtn.pro #education {
     opacity: 0;
+    visibility: hidden;
   }
 }
