@@ -57,6 +57,7 @@
   width: 200px;
   letter-spacing: -.2px;
 }
+
 #presentation header p:nth-of-type(1) {
   padding:  0 20px 0 35px;
   transform: translateY(-20px);
