@@ -9,7 +9,7 @@ const Presentation = (p) => (
 
 
     <header>
-      <h2 className="xtra"><span>I build</span><span>user</span><span>interfaces</span><span>with</span><strong>React</strong></h2>
+      <h2 className="xtra"><span className="bl">I build</span><span className="bl">user</span><span className="bl">interfaces</span><span>with </span><strong>React</strong></h2>
       <p className="demi">Hi everyone, my name is Maranaho, I’m 33 I come from the beautiful region of Brittany in France and I live in in the great city of London.<br/>
       <br/>I am an <strong>Art graduate</strong> with ES6 Vanilla <strong>JavaScript programming</strong> skills which basically makes me a Ninja / Unicorn.</p>
       <p>Also back in 2016 I was a <strong>Frontend development teacher</strong> for product design students in an Art school in France.<br/>

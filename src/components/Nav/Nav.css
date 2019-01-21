@@ -26,3 +26,5 @@ nav li:first-child a {padding-left: 0 }
 nav li a:hover { color: #12dec6 }
 main#nav.top nav li a:hover,
 main#nav.top nav li a {color: rgba(255,255,255,.8)}
+
+@media(max-width: 800px){#nav{display: none}}
