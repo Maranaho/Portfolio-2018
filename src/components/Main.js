@@ -1,55 +1,42 @@
-import React, {Component} from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Nav from './Nav/Nav';
-import Home from './Home/Home';
-import Github from './Frontend/Github';
-import Illustrations from './Illustrations/Illustrations';
-import Contact from './Contact/Contact';
-import Repo from './Frontend/Repo';
-import Footer from './Footer/Footer';
+import React, {Component} from 'react'
+import { Switch, Route } from 'react-router-dom'
+import Nav from './Nav/Nav'
+import Home from './Home/Home'
+import Github from './Frontend/Github'
+import Illustrations from './Illustrations/Illustrations'
+import Contact from './Contact/Contact'
+import Footer from './Footer/Footer'
+import Prototypes from './Prototypes/Prototypes'
+import Player from './Prototypes/Player'
+import Dashboard from './Prototypes/Dashboard'
+import Mapster from './Prototypes/Mapster'
+import Chat from './Prototypes/Chat'
+import Guardians from './Prototypes/Guardians'
+import Pricing from './Prototypes/Pricing'
 
 class Main extends Component {
 
-constructor(props) {
-  super(props)
-  this.state = {
-    navIsWhite: true
-  }
-
-    this.changeNavColor = this.changeNavColor.bind(this)
-    this.handleScroll = this.handleScroll.bind(this)
-}
-
-changeNavColor() {
-    if (window.scrollY + 100 >= window.innerHeight*2) {
-        if (this.state.navIsWhite) {
-            this.setState({navIsWhite: false})
-        }
-    } else {
-        if (!this.state.navIsWhite) {
-            this.setState({navIsWhite: true})
-        }
-    }
-}
 
 componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
 }
 
-handleScroll() {
-    this.changeNavColor()
-}
-
   render(){
     return (
       <main>
-        <Nav top={this.state.navIsWhite}/>
+        <Nav/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/github" component={Github} />
           <Route exact path="/illustrations" component={Illustrations} />
           <Route exact path="/contact" component={Contact} />
-          <Route exact path="/github/repo/:id" component={Repo} />
+          <Route exact path="/prototypes" component={Prototypes} />
+          <Route exact path="/prototypes/player" component={Player} />
+          <Route exact path="/prototypes/dashboard" component={Dashboard} />
+          <Route exact path="/prototypes/pricing" component={Pricing} />
+          <Route exact path="/prototypes/guardians" component={Guardians} />
+          <Route exact path="/prototypes/mapster" component={Mapster} />
+          <Route exact path="/prototypes/chat" component={Chat} />
         </Switch>
         <Footer/>
       </main>
@@ -59,4 +46,4 @@ handleScroll() {
 
 
 
-export default Main;
+export default Main

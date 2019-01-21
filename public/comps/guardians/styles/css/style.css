@@ -1,0 +1,406 @@
+/*reset*/
+@import "mosk.css";
+@import "../../../../styles/css/rwd.css";
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+a,
+ul,
+li,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+}
+.clear {
+  clear: both;
+}
+a,
+button,
+a:hover,
+*:active,
+*:focus,
+*:selected,
+*:visited {
+  outline: none !important;
+  border: none;
+  text-decoration: none;
+}
+/*triangles*/
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+.mosk900 {
+  font-family: 'MoskUltra-Bold900';
+  font-weight: 900;
+}
+.mosk700 {
+  font-family: 'MoskBold700';
+  font-weight: 700;
+}
+.mosk200 {
+  font-family: 'MoskExtra-Light200';
+  font-weight: 200;
+}
+body,
+html {
+  font-size: 12px;
+  font-family: Lato;
+  font-weight: 400;
+  color: #fff;
+  height: 100%;
+  background: #3fafd2;
+  background: -moz-radial-gradient(30% top, ellipse cover, #69ccec 0%, #3fafd2 100%);
+  background: -webkit-radial-gradient(30% top, ellipse cover, #69ccec 0%, #3fafd2 100%);
+  background: radial-gradient(ellipse at 30% top, #69ccec 0%, #3fafd2 100%);
+}
+body {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  justify-content: flex-end;
+  -ms-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  position: relative;
+  top: -50px;
+  left: 40px;
+}
+.ff .mobile {
+  height: 680px;
+}
+.mobile {
+  width: 300px;
+  height: 660px;
+  background: #1b1a29;
+  border-top: 50px solid #fff;
+  border-bottom: 50px solid #fff;
+  box-shadow: 0 15px 30px #2a93b4;
+  border-radius: 30px;
+  position: relative;
+  box-sizing: border-box;
+}
+.mobile:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 145px;
+  border-radius: 10px;
+  top: -25px;
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+}
+.mobile:before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 135px;
+  border-radius: 30px;
+  bottom: -40px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+.mobile .topbar {
+  background: url(../../img/topbar.png) center 5px no-repeat;
+  display: flex;
+  padding: 35px 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.mobile .topbar:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.mobile .topbar a {
+  margin: 0 15px;
+}
+.mobile .topbar .infos {
+  flex-grow: 1;
+}
+.mobile .topbar .infos h1 {
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 3px 0 5px;
+}
+.mobile .topbar .infos span {
+  color: #444263;
+  font-size: 1em;
+  font-weight: 900;
+}
+.mobile .topbar .infos span:nth-of-type(1) {
+  margin-right: 15px;
+}
+.mobile .topbar .infos span:nth-of-type(1):before {
+  font-size: 1em;
+  top: 0;
+  left: 0;
+}
+.mobile .topbar .infos span:before {
+  font-size: 1.2em;
+  margin-right: 4px;
+  position: relative;
+  top: 2px;
+  left: 4px;
+}
+.mobile .seats {
+  background: url(../../img/screen.png) center 0px no-repeat;
+  padding: 30px 20px 0;
+}
+.mobile .seats table {
+  width: 100%;
+}
+.mobile .seats td {
+  text-align: center;
+  color: #363452;
+  font-family: 'MoskUltra-Bold900';
+  font-weight: 900;
+  font-size: .8em;
+}
+.mobile .seats button,
+.mobile .seats span {
+  background: none;
+  border: 1px solid #363452;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: rgba(54, 52, 82, 0);
+  position: relative;
+  cursor: default;
+  box-shadow: 0 0 0 0 rgba(129, 87, 181, 0);
+  transform: scale(1);
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  -moz-transition: all 0.1s ease-in-out 0s;
+  -o-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+}
+.mobile .seats button.available,
+.mobile .seats span.available {
+  cursor: pointer;
+}
+.mobile .seats button.reserved,
+.mobile .seats span.reserved {
+  background: #363452;
+}
+.mobile .seats button.chat-check,
+.mobile .seats span.chat-check {
+  transform: scale(1.2);
+  background: #8157b5;
+  border: 1px solid #8157b5;
+  box-shadow: 0 0 5px 6px rgba(129, 87, 181, 0.2);
+}
+.mobile .seats button.chat-check:before,
+.mobile .seats span.chat-check:before {
+  color: #fff;
+  font-size: .5em;
+  position: absolute;
+  top: 3px;
+  left: 1px;
+}
+.mobile .seats .legend {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.mobile .seats .legend p {
+  font-size: 1em;
+}
+.mobile .seats .legend p span {
+  display: inline-flex;
+  width: 9px;
+  height: 9px;
+  margin-right: 5px;
+}
+.mobile .seats .legend p span:before {
+  display: none;
+}
+.mobile .seats .legend p span.available {
+  cursor: default;
+}
+.mobile .seats .legend p span.chat-check {
+  box-shadow: none;
+}
+.mobile h3 {
+  text-align: center;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2em;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding: 20px 0 5px;
+}
+.mobile h2 {
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: 1px;
+  margin: 0 0 15px;
+  position: relative;
+}
+.mobile h2:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #8157b5;
+  margin: 3px auto 0;
+}
+.mobile .addition {
+  padding: 0 20px;
+  height: 53px;
+  overflow-y: auto;
+}
+.mobile .addition span {
+  font-size: .8em;
+  line-height: 18px;
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  margin: 0 5px 5px 0;
+}
+.mobile .addition::-webkit-scrollbar {
+  width: 5px;
+}
+.mobile .addition::-webkit-scrollbar-thumb {
+  background: #363452;
+  border-radius: 5px;
+}
+.mobile .total {
+  text-align: center;
+  padding: 5px 0;
+  text-transform: uppercase;
+  color: #555281;
+  font-size: .9em;
+}
+.mobile .total strong {
+  color: #02b0ed;
+}
+.mobile button.btn {
+  background: #8157b5;
+  border: none;
+  color: #fff;
+  font-family: 'MoskExtra-Light200';
+  font-weight: 200;
+  font-size: 1em;
+  letter-spacing: 1px;
+  width: 80%;
+  display: block;
+  margin: 10px auto 0;
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(106, 27, 193, 0.5);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.mobile button.btn:hover {
+  background: #8c65bb;
+  box-shadow: 0 0 40px rgba(106, 27, 193, 0.4);
+}
+.mobile.detail {
+  -ms-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  top: 40px;
+  right: -20px;
+  background: url(../../img/guardian.png) center top no-repeat #1b1a29;
+}
+.mobile.detail .infos {
+  z-index: 1;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+}
+.mobile.detail .infos h1 {
+  text-align: center;
+  font-style: italic;
+  font-family: 'MoskUltra-Bold900';
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.9em;
+  letter-spacing: -0.5px;
+  line-height: 25px;
+  margin: 0 0 15px;
+}
+.mobile.detail .infos .timing {
+  text-align: center;
+  padding: 0 0 15px;
+}
+.mobile.detail .infos .timing span {
+  color: #444263;
+  font-size: 1em;
+  font-weight: 900;
+}
+.mobile.detail .infos .timing span:nth-of-type(1) {
+  margin-right: 15px;
+}
+.mobile.detail .infos .timing span:nth-of-type(1):before {
+  font-size: 1em;
+  top: 0;
+  left: 0;
+}
+.mobile.detail .infos .timing span:before {
+  font-size: 1.2em;
+  margin-right: 4px;
+  position: relative;
+  top: 2px;
+  left: 4px;
+}
+.mobile.detail .infos p {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 15px;
+  font-size: 1em;
+  letter-spacing: .3px;
+  line-height: 1.15em;
+  font-family: 'MoskExtra-Light200';
+  font-weight: 200;
+}
+.mobile.detail .infos:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  right: 0;
+  bottom: 120px;
+  background: -moz-linear-gradient(top, rgba(27, 26, 41, 0) 0%, #1b1a29 90%);
+  background: -webkit-linear-gradient(top, rgba(27, 26, 41, 0) 0%, #1b1a29 90%);
+  background: linear-gradient(to bottom, rgba(27, 26, 41, 0) 0%, #1b1a29 90%);
+  z-index: -1;
+}

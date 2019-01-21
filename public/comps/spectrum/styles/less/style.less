@@ -1,0 +1,125 @@
+// out: ../css/style.css, sourcemap: false, compress: false
+
+@import "mixin.less";
+@import "../../../guardians/styles/css/mosk.css";
+
+//Font
+.mosk900 {
+	font-family: 'MoskUltra-Bold900';
+	font-weight: 900;
+}
+
+.mosk700 {
+	font-family: 'MoskBold700';
+	font-weight: 700;
+}
+
+.mosk200 {
+	font-family: 'MoskExtra-Light200';
+	font-weight: 200;
+}
+
+
+body {
+    background:url(../../img/bg01.png) no-repeat center center #bccbe6;
+    z-index: 0;
+    font-size: 20px;
+    color: #fff;
+    font-style: italic;
+    overflow: hidden;
+}
+
+.shadow {
+    position: absolute;
+    background:url(../../img/bg.png) no-repeat center center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.wrapper {
+    position: relative;
+    z-index: 1;
+    width: 1000px;
+    margin: auto;
+    padding-top: 100px;
+    box-sizing: border-box;
+    height: 100%;
+    h1 {
+        .transition(@length: .05s);
+        .mosk200;
+        font-size: 17em;
+        letter-spacing: -20px;
+        line-height: .7em;
+        position: absolute;
+        left: -60px;
+        top: 80px;
+        display: inline-block;
+        opacity: .8;
+    }
+    sup{
+        font-size: .2em;
+        .mosk700;
+        position: absolute;
+        right: -60px;
+        top: 10px;
+    }
+    h2 {
+        .transition(@length: .05s);
+        font-size: 2em;
+        width: 400px;
+        .mosk200;
+        position: absolute;
+        left:0px;
+        top: 400px;
+        text-align: right;
+        strong {.mosk900}
+        &+h2 {
+            top:440px;
+        }
+    }
+    img {
+        .transition(@length: .05s);
+        position: absolute;
+        &:nth-of-type(1){
+            left: -180px;
+            top: -12px;
+        }
+        &:nth-of-type(2){
+            left: -90px;
+            top: 67px;
+        }
+        &:nth-of-type(3){
+            left: -40px;
+            top: 80px;
+        }
+        &:nth-of-type(4){
+            left: 200px;
+            top: 270px;
+        }
+        &:nth-of-type(5){
+            right: -110px;
+            bottom: 180px;
+        }
+        &:nth-of-type(6){
+            right: -180px;
+            bottom: 100px;
+        }
+    }
+}
+
+
+.lt-1024 {
+    body,.shadow {background-size: auto 100% }
+    .wrapper {
+        width: 80%;
+    }
+}
+.lt-640 {
+    body{
+        background:url(../../img/res.png) no-repeat center center #bccbe6;
+        background-size:  100% auto;
+    }
+    .shadow,.wrapper {display: none}
+}

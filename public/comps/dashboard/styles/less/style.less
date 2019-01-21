@@ -1,0 +1,367 @@
+// out: ../css/style.css, sourcemap: false, compress: false
+
+@import "mixin.less";
+
+body {
+    height: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 12px;
+    font-family: roboto;
+    text-align: center;
+    .radial-gradient(
+    	@begin: #39393f,
+    	@end: #1a1b20,
+    	@middle: #1a1b20,
+        @coord: 30% 0%,
+        @switch: 90%
+    );
+}
+
+button:focus {outline: none}
+
+h1 {
+    font-weight: 100;
+    font-size: 2.8em;
+    letter-spacing: -1px;
+    padding-top: 120px;
+}
+ h3 {
+     font-weight: 400;
+     font-size: .9em;
+     margin-top: 5px;
+ }
+
+h2 {
+    font-weight: 500;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+main {
+    width: 1280px;
+    padding-top: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    &:first-child {
+        width: 607px;
+        height: 607px;
+        text-align: center;
+    }
+    &:nth-of-type(2) {
+        margin-left: 25px;
+        flex-grow: 1;
+    }
+}
+
+article {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    &:first-child {
+        margin-right: 25px;
+        width: 423px;
+        > .tile {
+            height: 385px;
+            flex-grow: 0;
+            margin-bottom: 25px;
+        }
+    }
+    &:nth-of-type(2) {
+        width: 200px;
+        .tile:first-child {
+            height: 200px;
+            flex-grow: 0;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-weight: 100;
+            text-transform: none;
+            font-size: 2.3em;
+            margin-top: 30px;
+        }
+    }
+}
+
+.tileContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    .tile {
+        width: 200px;
+        &:first-child {
+            margin-right: 25px;
+        }
+    }
+}
+
+.tile {
+    background: rgba(82,84,94,.15);
+    padding: 15px;
+    box-shadow: 0 15px 25px rgba(20,20,20,.2);
+    flex-grow: 1;
+    box-sizing: border-box;
+    position: relative;
+    .nav {
+        border: none;
+        background: none;
+        font-size: 0;
+        color: #fff;
+        position: absolute;
+        top: 150px;
+        cursor: pointer;
+        .transition;
+        opacity: 1;
+        &:hover { opacity: .7}
+        &:before {
+            font-size: 17px;
+        }
+        &.chat-back {left: 60px}
+        &.chat-nxt {right: 60px}
+    }
+}
+
+
+.pick {
+    ul {
+        text-align: left;
+        margin-top: 12px;
+        li {
+            display: inline-block;
+            font-weight: 400;
+            font-size: .8em;
+            letter-spacing: .5px;
+            padding: 7px 11px;
+            box-shadow: 0 0 0 1px rgba(255,255,255,.5) inset;
+            border-radius: 30px;
+            margin: 6px 2px 0 0;
+            cursor: pointer;
+            .transition;
+            &.selected {
+                box-shadow: 0 0 0 1px #68d2ec, inset;
+                &[data-skill="ps"] {
+                    box-shadow: 0 0 0 1px #68d2ec inset;
+                    .radial-gradient(
+                    	@begin: #68d2ec,
+                    	@end: #48adf3,
+                    	@middle: #48adf3,
+                        @coord: 30% 0%,
+                        @switch: 100%
+                    );
+                }
+                &[data-skill="ht"] {
+                    box-shadow: 0 0 0 1px #f16529 inset;
+                    .radial-gradient(
+                    	@begin: #f16529,
+                    	@end: #e44d26,
+                    	@middle: #e44d26,
+                        @coord: 30% 0%,
+                        @switch: 100%)
+                }
+                &[data-skill="cs"],&[data-skill="ai"] {
+                    box-shadow: 0 0 0 1px #29a9df inset;
+                    .radial-gradient(
+                    	@begin: #29a9df,
+                    	@end: #0171bb,
+                    	@middle: #0171bb,
+                        @coord: 30% 0%,
+                        @switch: 100%)
+                }
+                &[data-skill="jq"],&[data-skill="oc"] {
+                    box-shadow: 0 0 0 1px #a0e27d inset;
+                    .radial-gradient(
+                    	@begin: #a0e27d,
+                    	@end: #4ebd45,
+                    	@middle: #4ebd45,
+                        @coord: 30% 0%,
+                        @switch: 100%)
+                }
+                &[data-skill="ng"] {
+                    box-shadow: 0 0 0 1px #ff5938 inset;
+                    .radial-gradient(
+                    	@begin: #ff5938,
+                    	@end: #f63813,
+                    	@middle: #f63813,
+                        @coord: 30% 0%,
+                        @switch: 100%)
+                    }
+                &[data-skill="zb"] {
+                    box-shadow: 0 0 0 1px #fc8f0e inset;
+                    .radial-gradient(
+                    	@begin: #fc8f0e,
+                    	@end: #f67613,
+                    	@middle: #f67613,
+                        @coord: 30% 0%,
+                        @switch: 100%)
+                    }
+                &[data-skill="c4d"] {
+                    box-shadow: 0 0 0 1px #4d68c6 inset;
+                    .radial-gradient(
+                    	@begin: #4d68c6,
+                    	@end: #172169,
+                    	@middle: #172169,
+                        @coord: 30% 0%,
+                        @switch: 100%)
+                    }
+                &[data-skill="ls"] {
+                    box-shadow: 0 0 0 1px #ffd541 inset;
+                    .radial-gradient(
+                    	@begin: #ffd541,
+                    	@end: #ab511c,
+                    	@middle: #ab511c,
+                        @coord: 30% 0%,
+                        @switch: 100%)
+                    }
+                &[data-skill="js"] {
+                    box-shadow: 0 0 0 1px #e75d77 inset;
+                    .radial-gradient(
+                    	@begin: #e75d77,
+                    	@end: #d9536d,
+                    	@middle: #d9536d,
+                        @coord: 30% 0%,
+                        @switch: 100%)
+                    }
+            }
+        }
+    }
+}
+
+
+.skills {
+    canvas {
+        margin: 20px auto 0;
+    }
+    .legend {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        li {
+            &:before {
+                content:"";
+                width: 10px;
+                height: 10px;
+                border-radius: 3px;
+                margin-right: 2px;
+                display: inline-flex;
+            }
+            &:nth-of-type(1):before  {
+                background: rgba(224,104,176,.2);
+                border: 1px solid rgba(224,104,176,1);
+            }
+            &:nth-of-type(2):before  {
+                background: rgba(128,137,212,.2);
+                border: 1px solid rgba(128,137,212,1);
+            }
+            &:nth-of-type(3):before  {
+                background: rgba(133,238,165,.2);
+                border: 1px solid rgba(133,238,165,1);
+            }
+
+        }
+    }
+}
+
+.trend {
+    padding :0;
+    canvas {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.ninja {
+    canvas {
+        position: absolute;
+        bottom: 24px;
+        left: 38px;
+    }
+    p {
+        font-weight: 100;
+        font-size: 3em;
+        letter-spacing: -2px;
+        margin-top: 54px;
+        sup {
+            font-size: .4em;
+            position: relative;
+            top: -4px;
+            right: -3px;
+        }
+    }
+}
+
+.evolution,.today {
+    canvas {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Responsive
+.lt-1280 {
+    body  {
+        background: lighten(#1a1b20,2%);
+    }
+    main {
+        display: block;
+        width: 200px;
+        margin: auto;
+        padding-top: 0;
+        .tile {
+            background: none;
+            border-bottom: 1px solid lighten(#1a1b20,10%);
+            &.trend {
+                height: 300px;
+                border: none;
+                h1 {padding-top: 20px}
+            }
+            &.skills {height: 250px}
+            &.today {
+                height: 400px;
+                border: none;
+            }
+        }
+        section,article, .tile, .tileContainer {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            box-shadow: none;
+            height: auto;
+        }
+        .tile,article:nth-of-type(2) .tile:first-child {
+            height: 200px;
+            margin: 10px 0;
+        }
+    }
+}

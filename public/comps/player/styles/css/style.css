@@ -1,0 +1,439 @@
+/*reset*/
+@import "mosk.css";
+@import "../../../../styles/css/rwd.css";
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+a,
+ul,
+li,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+}
+.clear {
+  clear: both;
+}
+a,
+button,
+a:hover,
+*:active,
+*:focus,
+*:selected,
+*:visited {
+  outline: none !important;
+  border: none;
+  text-decoration: none;
+}
+/*triangles*/
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+.mosk900 {
+  font-family: 'MoskUltra-Bold900';
+  font-weight: 900;
+}
+.mosk700 {
+  font-family: 'MoskBold700';
+  font-weight: 700;
+}
+.mosk200 {
+  font-family: 'MoskExtra-Light200';
+  font-weight: 200;
+}
+body,
+html {
+  font-size: 12px;
+  font-family: Lato;
+  font-weight: 100;
+  height: 100%;
+  background: #cad1d7;
+  background: -moz-radial-gradient(40% top, ellipse cover, #f4f7f8 0%, #cad1d7 100%);
+  background: -webkit-radial-gradient(40% top, ellipse cover, #f4f7f8 0%, #cad1d7 100%);
+  background: radial-gradient(ellipse at 40% top, #f4f7f8 0%, #cad1d7 100%);
+}
+body {
+  padding: 20px;
+  box-sizing: border-box;
+}
+body:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: url(../../img/earphones.png) center -40px no-repeat;
+  mix-blend-mode: darken;
+}
+.wrapper {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  justify-content: flex-end;
+}
+.mobile {
+  width: 300px;
+  height: 525px;
+  box-shadow: 3px 5px 10px #b6bfc8;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 5px solid rgba(215, 221, 225, 0.7);
+  border-right: 7px solid rgba(215, 221, 225, 0.3);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.4) 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.4) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.4) 100%);
+}
+.mobile.player {
+  padding-top: 90px;
+  height: 525px;
+  box-sizing: border-box;
+  -ms-transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  left: 50px;
+  top: 0;
+}
+.mobile:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 8px;
+  height: 21px;
+  background: url(../../img/topbar.png) no-repeat;
+}
+.mobile h2 {
+  font-family: 'MoskExtra-Light200';
+  font-weight: 200;
+  color: #adb8c1;
+  font-size: 1.8em;
+  margin-bottom: 3px;
+}
+.mobile h3 {
+  font-family: 'MoskExtra-Light200';
+  font-weight: 200;
+  color: #a4b0ba;
+  font-size: 1.1em;
+}
+.mobile .buttons {
+  position: absolute;
+  bottom: 60px;
+  left: 0px;
+  right: 0;
+}
+.mobile .buttons .play {
+  border: none;
+  background: -moz-linear-gradient(top, #f1f7fa 0%, #d2dbe0 100%);
+  background: -webkit-linear-gradient(top, #f1f7fa 0%, #d2dbe0 100%);
+  background: linear-gradient(to bottom, #f1f7fa 0%, #d2dbe0 100%);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 70px;
+  top: 37px;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 7px 12px #bbc4cc;
+  -webkit-transition: all 0.03s ease-in-out 0s;
+  -moz-transition: all 0.03s ease-in-out 0s;
+  -o-transition: all 0.03s ease-in-out 0s;
+  transition: all 0.03s ease-in-out 0s;
+}
+.mobile .buttons .play:hover span:before {
+  color: rgba(215, 240, 200, 0.9);
+}
+.mobile .buttons .play:active {
+  box-shadow: 0 1px 5px #b0bac3;
+}
+.mobile .buttons .play span {
+  display: block;
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  border-radius: 50%;
+  top: 32px;
+  left: 33px;
+  z-index: 2;
+  background: -moz-linear-gradient(top, #dee6ea 0%, #e9f0f3 100%);
+  background: -webkit-linear-gradient(top, #dee6ea 0%, #e9f0f3 100%);
+  background: linear-gradient(to bottom, #dee6ea 0%, #e9f0f3 100%);
+}
+.mobile .buttons .play span:before {
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  position: absolute;
+  top: 29px;
+  left: 31px;
+  color: rgba(171, 177, 185, 0.9);
+  font-size: 2.2em;
+  text-shadow: 1px 2px 3px #e5ecef, 0 0 0 #000, 1px 2px 3px #e5ecef;
+}
+.mobile .buttons .skip {
+  border: none;
+  position: absolute;
+  top: 160px;
+  width: 58px;
+  height: 58px;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 7px 12px #bbc4cc;
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  -moz-transition: all 0.1s ease-in-out 0s;
+  -o-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+  background: -moz-linear-gradient(top, #eff6f9 0%, #d1dadf 100%);
+  background: -webkit-linear-gradient(top, #eff6f9 0%, #d1dadf 100%);
+  background: linear-gradient(to bottom, #eff6f9 0%, #d1dadf 100%);
+}
+.mobile .buttons .skip:active {
+  box-shadow: 0 1px 2px #a4b0ba;
+}
+.mobile .buttons .skip:hover:before {
+  color: rgba(215, 240, 200, 0.9);
+}
+.mobile .buttons .skip:before {
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  color: rgba(171, 177, 185, 0.9);
+  font-size: 1.1em;
+  text-shadow: 1px 2px 3px #e5ecef, 0 0 0 #000, 1px 2px 3px #e5ecef;
+  position: absolute;
+  top: 23px;
+  left: 21px;
+}
+.mobile .buttons .skip.chat-rew {
+  left: 37px;
+}
+.mobile .buttons .skip.chat-frw {
+  right: 36px;
+}
+.mobile .buttons .skip[disabled="disabled"]:hover:before {
+  color: rgba(171, 177, 185, 0.9);
+}
+.mobile .buttons .skip[disabled="disabled"]:before {
+  opacity: .3;
+  text-shadow: none;
+}
+.mobile .buttons .witness {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 190px;
+  width: 100px;
+  height: 150px;
+  z-index: 3;
+  left: 100px;
+  font-family: 'MoskBold700';
+  font-weight: 700;
+}
+.mobile .buttons .chat-dwnld {
+  position: absolute;
+  z-index: 0;
+  top: 109px;
+  left: 69px;
+  width: 160px;
+  height: 120px;
+  border-radius: 50%;
+  background: #eecc9c;
+  border: none;
+  box-shadow: 0 1px 9px #909fab;
+  -webkit-transition: all 0.3s cubic-bezier(0.01, 0.41, 0.21, 0.99) 0s;
+  -moz-transition: all 0.3s cubic-bezier(0.01, 0.41, 0.21, 0.99) 0s;
+  -o-transition: all 0.3s cubic-bezier(0.01, 0.41, 0.21, 0.99) 0s;
+  transition: all 0.3s cubic-bezier(0.01, 0.41, 0.21, 0.99) 0s;
+}
+.mobile .buttons .chat-dwnld.active {
+  top: 119px;
+}
+.mobile .buttons .chat-dwnld:before {
+  color: #af9777;
+  font-size: 1.1em;
+  text-shadow: 1px 2px 3px #eecc9c, 0 0 0 #000, 1px 2px 3px #eecc9c;
+  position: absolute;
+  top: 101px;
+  left: 73px;
+}
+.mobile .buttons p {
+  font-family: 'MoskExtra-Light200';
+  font-weight: 200;
+  color: #99a6b2;
+  font-size: 1.2em;
+}
+.mobile .buttons path {
+  fill: url(#backplate);
+}
+.mobile .buttons .backplate svg {
+  filter: drop-shadow(0 4px 3px #b9c2ca);
+  position: relative;
+  z-index: 1;
+}
+.mobile .buttons linearGradient stop {
+  stop-color: #ecf2f5;
+}
+.mobile .buttons linearGradient stop ~ stop {
+  stop-color: #dfe8ed;
+}
+.mobile .buttons:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 38px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px #d0d7da inset;
+  background: -moz-linear-gradient(top, #dfe8ec 0%, #dfe8ec 100%);
+  background: -webkit-linear-gradient(top, #dfe8ec 0%, #dfe8ec 100%);
+  background: linear-gradient(to bottom, #dfe8ec 0%, #dfe8ec 100%);
+}
+.mobile .buttons #progressPie,
+.mobile .buttons #progress {
+  position: absolute;
+}
+.mobile .buttons #progressPie {
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.mobile .buttons #progressPie svg {
+  filter: drop-shadow(0 1px 1px #bbc4cc);
+}
+.mobile .buttons #progressPie .ct-slice-donut {
+  fill: none;
+  stroke: rgba(215, 240, 200, 0.9);
+  stroke-linecap: round;
+}
+.mobile.tracks {
+  padding: 0;
+  -ms-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  right: -50px;
+  top: 0;
+  border-bottom: 5px solid rgba(194, 201, 206, 0.7);
+  border-right: 7px solid rgba(215, 221, 225, 0.7);
+}
+.mobile.tracks .topBar {
+  padding: 40px 10px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.mobile.tracks .topBar button {
+  background: none;
+  border: none;
+  font-size: 0;
+}
+.mobile.tracks .topBar button.chat-menu:before {
+  font-size: 20px;
+}
+.mobile.tracks .topBar button:before {
+  font-size: 12px;
+  color: #c1c9d0;
+}
+.mobile.tracks ul {
+  text-align: left;
+  height: 426px;
+  border-top: 1px solid #d5dde2;
+}
+.mobile.tracks ul li {
+  padding: 20px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #d5dde2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #9eabb6;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0) inset;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  font-family: 'MoskExtra-Light200';
+  font-weight: 200;
+}
+.mobile.tracks ul li.active {
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.3) inset;
+}
+.mobile.tracks ul li.active:hover {
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.3) inset;
+}
+.mobile.tracks ul li.active:before {
+  top: 33px;
+  left: 15px;
+  position: absolute;
+}
+.mobile.tracks ul li.active.show .idx {
+  opacity: 1;
+}
+.mobile.tracks ul li.active .idx {
+  opacity: 0;
+}
+.mobile.tracks ul li.active p span {
+  color: #9cd27b;
+}
+.mobile.tracks ul li:hover {
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.2) inset;
+}
+.mobile.tracks ul li p span {
+  font-size: 1.3em;
+  color: #909fab;
+  text-shadow: 0.5px 0 0px #909fab;
+}
+.mobile.tracks ul li strong {
+  font-size: 1.7em;
+  font-family: 'MoskExtra-Light200';
+  font-weight: 200;
+}
+.mobile.tracks ul li .idx {
+  font-size: 2.6em;
+  color: #cad1d7;
+  text-shadow: none;
+}
+.ie .buttons {
+  background: url(../../img/ie.png) center 5px no-repeat;
+}
+.ie .buttons:before {
+  display: none;
+}
+.ie .buttons .chat-dwnld {
+  z-index: 0;
+}
+.ie .buttons .backplate {
+  background: url(../../img/backplate_ie.png) center 5px no-repeat;
+  position: relative;
+  height: 250px;
+  z-index: 1;
+}
+.ie .buttons .backplate svg {
+  display: none;
+}

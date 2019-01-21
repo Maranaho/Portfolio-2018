@@ -1,7 +1,7 @@
 .repos > li ul,
 #filters {
   display: flex;
-  padding: 10px 0;
+  padding: 10px 0 20px;
 }
 
 #filters li {
@@ -11,12 +11,11 @@
   border: 1px solid rgb(221, 232, 241);
   color: #797979;
   transition: .3s ease;
-
 }
 #filters li.selected {
-  border-color: #3bd9d0;
-  background: #3bd9d0;
-  color: #fff;
+  border: 1px solid rgba(59, 217, 208, 0);
+  background: rgba(59, 217, 208, 0.1);
+  color: #3bd9d0;
 }
 
 .repos > li li:not(:first-child),
@@ -36,14 +35,35 @@
 .repos {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 20px 0 80px;
 }
 .repos > li {
   width: 305px;
-  border-radius: 6px;
-  box-shadow: -1px 1px 0 rgba(232, 245, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(156, 167, 184,.1);
   background: #fff;
-  padding: 20px;
+  padding: 40px;
   box-sizing: border-box;
   margin: 15px 15px 15px 0;
+}
+
+.repos > li h3 a {
+  color: #434a55;
+  font-size: 35px;
+}
+.repos > li h3 { line-height: 30px }
+
+
+#Github_header { padding: 120px 0}
+#Github_header h1 {
+  font-size: 90px;
+  line-height: 86px;
+}
+#Github_header h1 strong {
+  background: linear-gradient(to right,#fce4ed,#ffe8cc);
+  font-family: 'xtra';
+  transform: translateY(5px);
+  line-height: 50px;
+  display: inline-block;
+  padding: 0 20px;
 }

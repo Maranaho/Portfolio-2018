@@ -11,10 +11,12 @@ class Home extends Component {
       vidBg: -(window.innerHeight *95/100)/4,
       vidBg1: (window.scrollY - window.innerHeight *90/100) - (window.innerHeight *90/100)/4,
       halfVH: (window.innerHeight *90/100)/4,
-      desk: window.innerWidth >= 1024 && window.innerHeigth >= 850
+      desk: window.innerWidth >= 1024 && window.innerHeigth >= 850,
+      navIsWhite : true
     }
     this.handleScroll = this.handleScroll.bind(this)
     this.setParalax = this.setParalax.bind(this)
+    this.scrollTo = this.scrollTo.bind(this)
   }
 
   componentDidMount() {
@@ -22,7 +24,10 @@ class Home extends Component {
   }
 
 
-  componentWillMmount() {this.handleScroll()}
+
+  componentWillMmount() {
+    this.handleScroll()
+  }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   }
@@ -36,19 +41,33 @@ class Home extends Component {
       })
   }
 
-
-
-
-  handleScroll() {
-      this.setParalax()
+  scrollTo(e){
+    let pos;
+    if (e.target.getAttribute('idx') === '0') {
+      pos = document.getElementById('presentation').getBoundingClientRect().top
+    } else if(e.target.getAttribute('idx') === '1'){
+      pos = document.getElementById('resume').getBoundingClientRect().top
+    } else {
+      pos = document.getElementById('header').getBoundingClientRect().top
+    }
+    window.scrollBy({
+      top: pos,
+      left: 0,
+      behavior: 'smooth'
+    })
   }
+
+
+
+
+  handleScroll() { this.setParalax() }
 
   render(){
     return (
-      <main>
-        <Header vidBg={this.state.vidBg}/>
-        <Presentation vidBg1={this.state.vidBg1}/>
-        <Resume/>
+      <main id="home">
+        <Header scrollTo={this.scrollTo} vidBg={this.state.vidBg}/>
+        <Presentation scrollTo={this.scrollTo} vidBg1={this.state.vidBg1}/>
+        <Resume scrollTo={this.scrollTo}/>
       </main>
     )
   }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="superChat">
+<head>
+<meta charset="utf-8">
+<title>Divs around</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:100,400,900" rel="stylesheet"><!--Roboto-->
+<link href="https://file.myfontastic.com/NsbvwSqtbZyYe2FvP2LNmg/icons.css" rel="stylesheet"><!--Icons-->
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"><!--indie flower-->
+<link rel="stylesheet" href="styles/css/simplebar.css">
+<link rel="stylesheet" href="styles/css/style.css">
+</head>
+<body>
+    <main>
+        <section class="content">
+            <div class="mobile temperature">
+                <span class="back chat-back"></span>
+                <div class="temp">
+                    <figure>
+                        <p class="pos">+</p>
+                        <div class="num">
+                            <ul class="dizaine"></ul>
+                            <ul class="unit"></ul>
+                        </div>
+                    </figure>
+                    <article></article>
+                    <div class="grad"></div>
+                </div><!--END temp-->
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#">Temperature</a></li>
+                        <li><a href="#">Lights</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Energy</a></li>
+                        <li><a href="#">Store</a></li>
+                        <li><a href="#">Service</a></li>
+                    </ul>
+                </nav>
+                <button class="apply">Apply <span class="chat-check"></span></button>
+            </div><!--END mobile-->
+
+            <!--Chat-->
+            <div class="mobile chat">
+                <div class="title">
+                    <span class="chat-back"></span>
+                    <h2>Let's talk about CSS</h2>
+                    <span class="chat-more"></span>
+                </div>
+
+                <!--Chat-->
+                <div class="discussion">
+                    <div class="talk otherPpl">
+                        <a href><img src="img/joe.png" alt="joe"></a>
+                        <p>Hi everyone !</p>
+                    </div>
+                    <div class="talk me">
+                        <p>Hi Joe !</p>
+                    </div>
+                    <div class="talk otherPpl">
+                        <a href><img src="img/quentin.png" alt="quentin"></a>
+                        <p>Hey what do you think about this guy’s CSS skills ?</p>
+                    </div>
+                    <div class="talk otherPpl">
+                        <a href><img src="img/joe.png" alt="joe"></a>
+                        <p>He’s brilliant! He must be a ninja ;)</p>
+                    </div>
+                    <p class="typing"></p>
+                </div><!--END discussion-->
+
+                <div class="type">
+                    <div class="btns">
+                        <span class="chat-smiley">Smiley</span>
+                        <span class="chat-attach">Attach</span>
+                        <button id="send" class="chat-send" disabled>Send</button>
+                    </div>
+                    <textarea id="message" type="text" value="" placeholder="New message"></textarea>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script><!--HeadJS-->
+<script type="text/javascript" src="js/js.js"></script>
+</html>

@@ -1,0 +1,367 @@
+// out: ../css/style.css, sourcemap: false, compress: false
+
+@import "mixin.less";
+@import "mosk.css";
+@col1: #f4f7f8;
+@col2:#cad1d7;
+@white: rgba(255,255,255,.4);
+@width: 1280px;
+
+button{
+	cursor: pointer;
+	&:focus {outline: none}
+}
+//Font
+.mosk900 {
+	font-family: 'MoskUltra-Bold900';
+	font-weight: 900;
+}
+
+.mosk700 {
+	font-family: 'MoskBold700';
+	font-weight: 700;
+}
+
+.mosk200 {
+	font-family: 'MoskExtra-Light200';
+	font-weight: 200;
+}
+
+
+body,html {
+    font-size: 12px;
+    font-family: Lato;
+    font-weight: 100;
+    height: 100%;
+    .radial-gradient(
+    	@end: @col2,
+    	@begin: @col1,
+    	@middle: @col2,
+        @coord: 40% top
+    )
+}
+body {
+    padding: 20px;
+	box-sizing: border-box;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: url(../../img/earphones.png) center -40px no-repeat;
+		mix-blend-mode: darken;
+	}
+}
+.wrapper {
+	display: flex;
+	width: 1000px;
+	margin: auto;
+	justify-content: flex-end;
+}
+
+.mobile {
+    width: 300px;
+    height: 525px;
+    box-shadow: 3px 5px 10px darken(@col2,7%);
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+	border-bottom: 5px solid rgba(215,221,225,.7);
+	border-right: 7px solid rgba(215,221,225,.3);
+    background: -webkit-linear-gradient(left, @white 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, @white 100%);
+    background: -o-linear-gradient(left, @white 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, @white 100%);
+    background: linear-gradient(to right, @white 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, @white 100%);
+
+    &.player {
+		padding-top: 90px;
+		height: 525px;
+		box-sizing: border-box;
+		.rotate(@deg: -1deg);
+		left: 50px;
+		top: 0;
+	}
+    &:after {
+        content:"";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 8px;
+        height: 21px;
+        background: url(../../img/topbar.png) no-repeat;
+    }
+
+    h2 {
+        .mosk200;
+        color: darken(@col2, 10%);
+        font-size: 1.8em;
+        margin-bottom: 3px;
+    }
+    h3 {
+        .mosk200;
+        color: darken(@col2, 13%);
+        font-size: 1.1em;
+    }
+
+	.buttons {
+	    position: absolute;
+	    bottom: 60px;
+	    left: 0px;
+	    right: 0;
+	    .play {
+	        border: none;
+	        .linear-gradient(
+	            @begin: #f1f7fa,
+	            @end: #d2dbe0,
+	            @middle: #f1f7fa
+	        );
+	        width: 150px;
+	        height: 150px;
+	        position: absolute;
+	        left: 70px;
+	        top: 37px;
+	        border-radius: 50%;
+	        z-index: 2;
+	        box-shadow: 0 7px 12px darken(@col2, 5%);
+	        .transition(@length:.03s);
+	        &:hover span:before{color: rgba(215,240,200,.9)}
+	        &:active {	box-shadow: 0 1px 5px darken(@col2, 9%)}
+	        span {
+	            display: block;
+	            width: 85px;
+	            height: 85px;
+	            position: absolute;
+	            border-radius: 50%;
+	            top: 32px;
+	            left: 33px;
+	            z-index: 2;
+	            &:before {
+	                .transition;
+	                position: absolute;
+	                top: 29px;
+	                left: 31px;
+	                color: rgba(171,177,185,.9);
+	                font-size: 2.2em;
+	                text-shadow: 1px 2px 3px #e5ecef, 0 0 0 #000, 1px 2px 3px #e5ecef;
+	            }
+	            .linear-gradient(
+	                @end: #e9f0f3,
+	                @begin: #dee6ea,
+	                @middle: #e9f0f3
+	            );
+	        }
+	    }
+	    .skip {
+	        border: none;
+	        position: absolute;
+	        top: 160px;
+	        width: 58px;
+	        height: 58px;
+	        z-index: 2;
+	        border-radius: 50%;
+	        box-shadow: 0 7px 12px darken(@col2, 5%);
+	        .transition(@length:.1s);
+	        &:active {	box-shadow: 0 1px 2px darken(@col2, 13%)}
+	        &:hover:before{color: rgba(215,240,200,.9)}
+	        &:before {
+	            .transition;
+	            color: rgba(171,177,185,.9);
+	            font-size: 1.1em;
+	            text-shadow: 1px 2px 3px #e5ecef, 0 0 0 #000, 1px 2px 3px #e5ecef;
+	            position: absolute;
+	            top: 23px;
+	            left: 21px;
+	        }
+	        .linear-gradient(
+	            @begin: #eff6f9,
+	            @end: #d1dadf,
+	            @middle: #eff6f9
+	        );
+	        &.chat-rew {
+	            left: 37px;
+	        }
+	        &.chat-frw{
+	            right: 36px;
+	        }
+	        &[disabled="disabled"] {
+	            &:hover:before {color: rgba(171,177,185,.9)}
+	            &:before {
+	                opacity: .3;
+	                text-shadow: none;
+	            }
+	        }
+	    }
+	    .witness {
+	        cursor: pointer;
+	        display: block;
+	        position: absolute;
+	        top: 190px;
+	        width: 100px;
+	        height: 150px;
+	        z-index: 3;
+	        left: 100px;
+	        .mosk700;
+	    }
+	    .chat-dwnld {
+	        position: absolute;
+	        z-index: 0;
+	        top: 109px;
+	        left: 69px;
+	        width: 160px;
+	        height: 120px;
+	        border-radius: 50%;
+	        background: #eecc9c;
+	        border: none;
+	        box-shadow: 0 1px 9px darken(@col2, 20%);
+	        .transition(@length:.3s,@easing:cubic-bezier(0.01, 0.41, 0.21, 0.99));
+	        &.active {top: 119px}
+	        &:before {
+	            color: #af9777;
+	            font-size: 1.1em;
+	            text-shadow: 1px 2px 3px #eecc9c, 0 0 0 #000, 1px 2px 3px #eecc9c;
+	            position: absolute;
+	            top: 101px;
+	            left: 73px;
+	        }
+	    }
+	    p {
+	        .mosk200;
+	        color: darken(@col2, 17%);
+	        font-size: 1.2em;
+	    }
+	    path {
+	        fill:url(#backplate)
+	    }
+	    .backplate svg {
+	        filter: drop-shadow( 0 4px 3px darken(@col2, 6%) );
+	        position: relative;
+	        z-index: 1;
+	    }
+	    linearGradient stop {
+	        stop-color: #ecf2f5;
+	        ~ stop {
+	            stop-color: #dfe8ed;
+	        }
+	    }
+	    &:before {
+	        content: "";
+	        display: block;
+	        position: absolute;
+	        top: 5px;
+	        left: 38px;
+	        width: 220px;
+	        height: 220px;
+	        border-radius: 50%;
+	        box-shadow: 0 1px 2px saturate(darken(@col1, 13%), -10%) inset;
+	        .linear-gradient(
+	            @end: #dfe8ec,
+	            @begin: #dfe8ec,
+	            @middle: #dfe8ec
+	        );
+	    }
+	    #progressPie,#progress {
+	        position: absolute;
+	    }
+	    #progressPie {
+	        top: 0;
+	        left: 0;
+	        z-index: 0;
+	        svg {filter: drop-shadow( 0 1px 1px darken(@col2, 5%) )}
+	        .ct-slice-donut {
+	            fill: none;
+	            stroke: rgba(215, 240, 200, 0.9);
+	            stroke-linecap: round;
+	        }
+	    }
+	}
+	&.tracks {
+		padding: 0;
+		.rotate(@deg: 4deg);
+		right: -50px;
+		top: 0;
+		border-bottom: 5px solid rgba(194,201,206,.7);
+		border-right: 7px solid rgba(215,221,225,.7);
+		.topBar {
+			padding: 40px 10px 12px;
+			display: flex;
+			justify-content: space-between;
+			button {
+				background: none;
+				border: none;
+				font-size: 0;
+				&.chat-menu:before {font-size: 20px}
+				&:before {
+					font-size: 12px;
+					color:darken(@col2, 3%);
+				}
+			}
+		}
+		ul {
+			text-align: left;
+			height: 426px;
+			border-top: 1px solid #d5dde2;
+			li {
+				padding: 20px 15px;
+				cursor: pointer;
+				border-bottom: 1px solid #d5dde2;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color:darken(@col2, 15%);
+				box-shadow: 0 0 20px 10px rgba(255,255,255,0) inset;
+				position: relative;
+				&.active {
+					box-shadow: 0 0 20px 10px rgba(255,255,255,.3) inset;
+					&:hover {box-shadow: 0 0 20px 10px rgba(255,255,255,.3) inset}
+					&:before {
+						top: 33px;
+						left: 15px;
+						position: absolute;
+					}
+					&.show .idx{opacity: 1}
+					.idx{opacity: 0}
+					p span{color: #9cd27b}
+				}
+				.transition(@length:.3s);
+				.mosk200;
+				&:hover {box-shadow: 0 0 20px 10px rgba(255,255,255,.2) inset}
+				p span {
+					font-size: 1.3em;
+					color:darken(@col2, 20%);
+					text-shadow: .5px 0 0px darken(@col2, 20%);
+				}
+				strong {
+					font-size: 1.7em;
+					.mosk200;
+				}
+				.idx {
+					font-size: 2.6em;
+					color:darken(@col2, 0%);
+					text-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+.ie .buttons {
+	background: url(../../img/ie.png) center 5px no-repeat;
+	&:before {display: none}
+	.chat-dwnld {z-index: 0}
+	.backplate {
+		background: url(../../img/backplate_ie.png) center 5px no-repeat;
+		position: relative;
+		height: 250px;
+		z-index: 1;
+		svg {
+			display: none;
+		}
+	}
+}
+
+
+@import "../../../../styles/css/rwd.css";

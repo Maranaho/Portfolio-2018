@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="superMapster">
+<head>
+<meta charset="utf-8">
+<title>Mapster</title>
+<link href="https://file.myfontastic.com/NsbvwSqtbZyYe2FvP2LNmg/icons.css" rel="stylesheet"><!--Icons-->
+<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet"><!--Typo Cabin-->
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"><!--indie flower-->
+<link rel="stylesheet" href="styles/css/simplebar.css" rel="stylesheet"><!--cross browser custom scrollbars-->
+<link rel="stylesheet" href="styles/css/selectric.css" rel="stylesheet"><!--cross browser custom scrollbars-->
+<link rel="stylesheet" href="styles/css/style.css">
+</head>
+<body>
+
+    <main>
+        <nav class="direction">
+            <div class="chat-search">
+                <input type="search" placeholder="Search">
+                <span>7493</span>
+            </div><!--END search-->
+            <div class="searchPlace" data-simplebar>
+                <ul>
+                    <li>
+                        <p>Desired skills</p>
+                        <div><span>HTML</span><span>CSS</span><span>JS</span></div>
+                    </li>
+                    <li>
+                        <p>Desired skill set</p>
+                        <span>Front-end developer</span>
+                    </li>
+                    <li>
+                        <p>Availibility</p>
+                        <span>Asap</span>
+                    </li>
+                </ul>
+                <h2 class="chat-mark">Places <button class="chat-vert">Menu</button></h2>
+                <ul>
+                    <li>Los Angeles, CA <span>952</span></li>
+                    <li>San francisco, CA <span>109</span></li>
+                    <li>Sydney, AUS <span>2194</span></li>
+                    <li class="active">Nantes, France <span>468</span></li>
+                </ul>
+                <a class="chat-down more" href="#">More</a>
+                <h2 class="chat-target">Skills<button class="chat-plus">more</button></h2>
+                <ul>
+                    <li>
+                        <p>Angular.JS</p>
+                        <span>321</span>
+                    </li>
+                    <li>
+                        <p>Cinema 4D</p>
+                        <span>744</span>
+                    </li>
+                    <li>
+                        <p>Octane renderer</p>
+                        <span>354</span>
+                    </li>
+                    <li>
+                        <p>zBrush</p>
+                        <span>845</span>
+                    </li>
+                </ul>
+            </div><!--END searchPlace-->
+            <div class="needDirection">
+                <div class="head">
+                    <button class="chat-arrow-back"></button>
+                    <button class="chat-hor"></button>
+                </div><!--head-->
+                <div class="content" data-simplebar>
+                    <div class="profile">
+                        <div class="width">
+                            <img src="img/maranaho.png" alt="maranaho">
+                            <div class="detail">
+                                <h3>Maranaho N'GUESSAN</h3>
+                                <h4>Frontend developer</h4>
+                                <p class="rate"><em>4.8</em></p>
+                            </div>
+                        </div>
+                    </div><!--profile-->
+                    <div class="horaires">
+                        <div class="width">
+                            <select>
+                                <option value="mon">mon</option>
+                                <option value="tue">tue</option>
+                                <option selected value="wed">wed</option>
+                                <option value="thu">thu</option>
+                                <option value="fri">fri</option>
+                                <option value="sat">sat</option>
+                                <option value="sun">sun</option>
+                            </select>
+                            <p class="time">08:00 - 17:30</p>
+                        </div><!--END width-->
+                    </div><!--horaires-->
+                    <p class="width more">
+                        Maranaho N'GUESSAN is a tromendously skilled and passionate front-end developer. With 7 years of experience he is now teaching his passion to aspiring UI designers in a art school in Nantes where he currently lives.
+                    </p>
+                    <div class="friends">
+                        <div class="width">
+                            <a href="http://www.uncoindpixel.com/" target="_blank"><img src="img/damien.png" alt="damien"></a>
+                            <a href="http://www.alizee-rault.com/" target="_blank"><img src="img/alize.png" alt="alize"></a>
+                            <a href="https://www.behance.net/najatjardini" target="_blank"><img src="img/najat.png" alt="najat"></a>
+                            <span>+8</span>
+                        </div>
+                    </div><!--END width-->
+                    <div class="width maps">
+                        <img src="img/map.png" alt="map">
+                    </div><!--END width-->
+                </div><!--END content-->
+            </div><!--END needDirection-->
+        </nav>
+        <div class="btnContainer">
+            <div class="top">
+                <button class="chat-search"></button>
+                <button class="chat-home"></button>
+            </div>
+            <div class="bottom">
+                <button class="plus">+</button>
+                <button class="minus">-</button>
+                <button class="chat-world"></button>
+            </div>
+
+        </div>
+        <div id="map"></div>
+    </main>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--jQ-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script><!--Head JS-->
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAvSPQCOHZOQqDaHDesjdiXIgjhHFyN-90&callback&callback"></script><!--Google Maps-->
+<script src="js/simplebar.js"></script><!--simplebar-->
+<script src="js/map.js"></script>
+<script src="js/read-more.js"></script>
+<script src="js/jquery.selectric.min.js"></script><!--custom select-->
+<script src="js/js.js"></script>
+</html>

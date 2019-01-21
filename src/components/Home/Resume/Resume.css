@@ -64,6 +64,15 @@
   z-index: 0;
 }
 
+.backTotheSynths {
+  background: linear-gradient(to right, #09fddf , #3cdcff);
+  border-radius: 100px;
+  padding: 5px 50px;
+  color: #fff;
+  border: none;
+  margin-left: 40px;
+}
+
 /**/
 /*background: linear-gradient(to right,#fce4ed,#ffe8cc);*/
 
@@ -72,6 +81,7 @@
     display: flex;
     padding: 20px 0 40px;
     position: relative;
+    align-items: center;
 }
 
 #toggleCmpnt {
@@ -102,7 +112,7 @@
 #toggleCmpnt #pro {margin-right: 20px}
 
 
-#resumeNxtPrv { margin-left: 50px}
+#resumeNxtPrv { margin: 0 50px}
 #resumeNxtPrv button {
   background: #fff;
   border: 1px solid rgba(190, 197, 210, .5);

@@ -11,6 +11,7 @@ const Header = (p) => (
       <strong className="xtra">JS</strong>
       <span className="thin">Programmer</span>
     </h3>
+    <div className="scrollHeader"><button onClick={p.scrollTo} idx="0">What I do</button></div>
   </main>
 );
 

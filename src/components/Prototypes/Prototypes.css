@@ -1,0 +1,113 @@
+#prototypes {transform: translateY(-90px)}
+
+#prototypeContent {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  top: 150px;
+}
+#prototypeContent section {
+  position: relative;
+}
+#prototypeContent section article {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.protoContent {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.prototypeNav,
+.protoContent ul,
+.protoContent h3,
+.protoContent p { max-width: 270px }
+.protoContent p { padding-bottom: 10px }
+.protoContent h3 { padding-top: 15px }
+
+#prototypesList {
+  display: flex;
+  justify-content: flex-end;
+}
+#prototypesList aside {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+}
+#prototypesList ul { width: 50% }
+#prototypesList ul li { padding: 5px }
+
+li {position: relative}
+img {width:100%}
+
+.prototype {
+  position: fixed;
+  height: 10px;
+  background: red;
+}
+
+.protoContent ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.protoContent button {
+   background: linear-gradient(to right, #09fddf , #3cdcff);
+   border: none;
+   border-radius: 80px;
+   padding: 5px 20px;
+   font-family: 'bold';
+   font-size: 13px;
+   text-transform: uppercase;
+   color:#fff;
+   margin: 3px 3px 3px 0;
+}
+
+.protoContent li:nth-child(even) button {
+  background: linear-gradient(to right,#fce4ed,#ffe8cc);
+  color: #ffabbd;
+}
+
+.prototypeNav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px
+}
+
+.mapster .prototypeNav,
+.dash .prototypeNav,
+.pricing .prototypeNav {
+  position: fixed;
+  top: 400px;
+  width: 100%;
+  max-width: inherit;
+  left: 0;
+}
+.mapster .prototypeNav a:first-child,
+.dash .prototypeNav a:first-child,
+.pricing .prototypeNav a:first-child{
+  transform: translateX(200px);
+}
+.pricing .prototypeNav a:last-child{
+  transform: translateX(-200px);
+  color: #325279;
+}
+.pricing .prototypeNav a:first-child{color: #325279}
+.mapster .prototypeNav a:last-child,
+.dash .prototypeNav a:last-child{
+  transform: translateX(-200px);
+}
+.dash .prototypeNav a {
+  color: #fff;
+}
+
+#nav.price ul {justify-content: flex-end}
+#nav.mapster ul li a,
+#nav.dash ul li a{color: #fff}
+
+
+.mapster .prototypeNav a,
+.guardians .prototypeNav a{color: #fff}

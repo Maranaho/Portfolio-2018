@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="playerPage">
+<head>
+<meta charset="utf-8">
+<title>Music Player</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:100,400,900" rel="stylesheet"><!--Roboto-->
+<link href="https://file.myfontastic.com/NsbvwSqtbZyYe2FvP2LNmg/icons.css" rel="stylesheet"><!--Icons-->
+<link rel="stylesheet" href="styles/css/simplebar.css">
+<link rel="stylesheet" href="styles/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="mobile player">
+            <h2>Prelude</h2>
+            <h3>Pierre de Bethmann - Complexe</h3>
+            <div class="buttons">
+                <button id="play" class="play">
+                    <span class="chat-play"></span>
+                </button>
+                <button disabled="disabled" id="prv" class="skip chat-rew"></button>
+                <button id="nxt" class="skip chat-frw"></button>
+                <a class="witness" href="music/complexe/PdBthmn.jpg" alt="Pierre de Bethmann" target="_blank" download></a>
+                <button class="chat-dwnld"></button>
+                <div class="backplate">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250"viewBox="0 0 255.1 255.1" style="enable-background:new 0 0 255.1 255.1;" xml:space="preserve">
+                        <defs>
+                            <linearGradient id="backplate" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" />
+                                <stop offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        <g><path d="M247.1,192.3c0,20.5-16.6,37-37,37c-20.2,0-36.7-16.2-37-36.4c-13.8,8.4-30,13.3-47.4,13.3c-15.4,0-29.9-3.8-42.7-10.6c-1.7,18.9-17.6,33.7-36.9,33.7c-20.5,0-37-16.6-37-37c0-19.7,15.4-35.8,34.8-37c-6-12.1-9.3-25.7-9.3-40.2c0-50.3,40.8-91.1,91.1-91.1c50.3,0,91.1,40.8,91.1,91.1c0,14.4-3.4,28.1-9.3,40.2c0.9-0.1,1.8-0.1,2.7-0.1C230.5,155.2,247.1,171.8,247.1,192.3z"/></g>
+                    </svg>
+                </div><!--END backplate-->
+                <p>Pull to download<br>the cover</p>
+                <div id="progressPie"></div>
+            </div><!--Buttons-->
+
+        </div><!--END Mobile-->
+        <div class="mobile tracks">
+            <div class="topBar">
+                <button class="chat-back">Back</button>
+                <div class="album">
+                    <h2>Complexe</h2>
+                    <h3>Pierre de Bethmann</h3>
+                </div>
+                <button class="chat-menu">Menu</button>
+
+            </div><!--END topBar-->
+            <audio src="music/complexe/Prelude.mp3" type="audio/mp3"></audio>
+            <div id="audios"></div>
+            <ul data-simplebar>
+                <li class="active show"><p><span>Prelude</span></p><strong>0:58</strong></li>
+                <li><p><span>Complexe</span></p><strong>7:49</strong></li>
+                <li><p><span>Hors Modes</span></p><strong>7:20</strong></li>
+                <li><p><span>Alter eco</span></p><strong>5:47</strong></li>
+                <li><p><span>H</span></p><strong>7:43</strong></li>
+                <li><p><span>Chaos</span></p><strong>7:15</strong></li>
+                <li><p><span>Interlude</span></p><strong>1:36</strong></li>
+                <li><p><span>Lato Sensu</span></p><strong>7:35</strong></li>
+                <li><p><span>76</span></p><strong>7:20</strong></li>
+                <li><p><span>Moderato</span></p><strong>4:45</strong></li>
+                <li><p><span>Frasques</span></p><strong>8:43</strong></li>
+                <li><p><span>Knab</span></p><strong>6:03</strong></li>
+            </ul>
+        </div><!--END mobile-->
+    </div><!--END wrapper-->
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--jQ-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script><!--Chartist-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script><!--HeadJS-->
+<script type="text/javascript" src="js/simplebar.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</html>

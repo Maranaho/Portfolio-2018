@@ -1,0 +1,349 @@
+// out: ../css/style.css, sourcemap: false, compress: false
+
+@import "mixin.less";
+@import "mosk.css";
+@col1: #69ccec ;
+@col2:#3fafd2;
+@white: rgba(255,255,255,.5);
+@width: 1280px;
+
+button{
+	cursor: pointer;
+	&:focus {outline: none}
+}
+//Font
+.mosk900 {
+	font-family: 'MoskUltra-Bold900';
+	font-weight: 900;
+}
+
+.mosk700 {
+	font-family: 'MoskBold700';
+	font-weight: 700;
+}
+
+.mosk200 {
+	font-family: 'MoskExtra-Light200';
+	font-weight: 200;
+}
+
+
+body,html {
+    font-size: 12px;
+    font-family: Lato;
+    font-weight: 400;
+	color: #fff;
+    height: 100%;
+    .radial-gradient(
+    	@end: @col2,
+    	@begin: @col1,
+    	@middle: @col2,
+        @coord: 30% top
+    )
+}
+body {
+    padding: 20px;
+	box-sizing: border-box;
+}
+.wrapper {
+	display: flex;
+	width: 1000px;
+	margin: auto;
+	justify-content: flex-end;
+	.rotate(@deg: 3deg);
+	position: relative;
+	top: -50px;
+	left: 40px;
+}
+
+.ff {
+	.mobile {
+		height: 680px;
+	}
+}
+.mobile {
+    width: 300px;
+    height: 660px;
+	background: #1b1a29;
+	border-top: 50px solid #fff;
+	border-bottom: 50px solid #fff;
+    box-shadow: 0 15px 30px darken(@col2,10%);
+    border-radius: 30px;
+    position: relative;
+    box-sizing: border-box;
+    &:after {
+		content:"";
+        position: absolute;
+        display: block;
+        left: 145px;
+		border-radius: 10px;
+        top: -25px;
+        width: 10px;
+        height: 10px;
+		background: #ddd;
+	}
+    &:before {
+		content:"";
+        position: absolute;
+        display: block;
+        left: 135px;
+		border-radius: 30px;
+        bottom: -40px;
+        width: 30px;
+        height: 30px;
+		border: 1px solid #ddd;
+	}
+	.topbar {
+		background: url(../../img/topbar.png) center 5px no-repeat;
+		display: flex;
+		padding: 35px 0 10px;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid rgba(0,0,0,.3);
+		&:after {
+			content:"";
+	        display: block;
+			position: absolute;
+	        top: 25px;
+			left: 0;
+	        width: 100%;
+	        height: 1px;
+			background: rgba(0,0,0,.3);
+		}
+		a {margin: 0 15px}
+		.infos {
+			flex-grow: 1;
+			h1 {
+				font-weight: 400;
+				font-size: 1em;
+				text-transform: uppercase;
+				margin: 3px 0 5px;
+			}
+			span {
+				color: #444263;
+				font-size: 1em;
+				font-weight: 900;
+				&:nth-of-type(1) {
+					margin-right: 15px;
+					&:before {
+						font-size: 1em;
+						top: 0;
+						left: 0;
+					}
+				}
+				&:before {
+					font-size: 1.2em;
+					margin-right: 4px;
+					position: relative;
+					top: 2px;
+					left: 4px;
+				}
+			}
+		}
+	}
+	.seats {
+		background: url(../../img/screen.png) center 0px no-repeat;
+		padding: 30px 20px 0;
+		table {width: 100%}
+		td {
+			text-align: center;
+			color: rgba(54,52,82,1);
+			.mosk900;
+			font-size: .8em;
+		}
+		button,span {
+			background: none;
+			border: 1px solid rgba(54,52,82,1);
+			padding: 0;
+			width: 12px;
+			height: 12px;
+			border-radius: 3px;
+			background: rgba(54,52,82,0);
+			position: relative;
+			cursor: default;
+			box-shadow: 0 0 0 0 rgba(129,87,181,0);
+			transform: scale(1);
+			.transition(@length:.1s);
+			&.available{cursor: pointer}
+			&.reserved {background: rgba(54,52,82,1)}
+			&.chat-check {
+				transform: scale(1.2);
+				background: rgba(129,87,181,1);
+				border: 1px solid rgba(129,87,181,1);
+				box-shadow: 0 0 5px 6px rgba(129,87,181,.2);
+				&:before {
+					color: #fff;
+					font-size: .5em;
+					position: absolute;
+					top: 3px;
+					left: 1px;
+				}
+			}
+		}
+		.legend {
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 0;
+			p {
+
+				font-size: 1em;
+				span {
+					display: inline-flex;
+					width: 9px;
+					height: 9px;
+					margin-right: 5px;
+					&:before {display: none}
+					&.available{cursor: default}
+					&.chat-check{box-shadow: none;}
+				}
+			}
+		}
+	}
+	h3 {
+		text-align: center;
+		font-weight: 900;
+		font-style: italic;
+		font-size: 2em;
+		line-height: 30px;
+		text-transform: uppercase;
+		padding: 20px 0 5px;
+	}
+	h2 {
+		text-align: center;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-size: .9em;
+		letter-spacing: 1px;
+		margin: 0 0 15px;
+		position: relative;
+		&:after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 1px;
+			background: rgba(129,87,181,1);
+			margin: 3px auto 0;
+		}
+	}
+	.addition {
+		padding: 0 20px;
+		height: 53px;
+		overflow-y: auto;
+		span {
+			font-size: .8em;
+			line-height: 18px;
+			display: inline-block;
+			padding: 2px 8px;
+			border: 1px solid rgba(255,255,255,.5);
+			border-radius: 20px;
+			margin: 0 5px 5px 0;
+		}
+		&::-webkit-scrollbar {
+	        width: 5px;
+	    }
+	    &::-webkit-scrollbar-thumb {
+	      background: rgba(54,52,82,1);
+	      border-radius: 5px;
+	    }
+	}
+	.total {
+		text-align: center;
+		padding: 5px 0;
+		text-transform: uppercase;
+		color: lighten(rgba(54,52,82,1),15%);
+		font-size: .9em;
+		strong {color: #02b0ed}
+	}
+	button.btn {
+		background: rgba(129,87,181,1);
+		border: none;
+		color: #fff;
+		.mosk200;
+		font-size: 1em;
+		letter-spacing: 1px;
+		width: 80%;
+		display: block;
+		margin: 10px auto 0;
+		padding: 8px;
+		border-radius: 50px;
+		box-shadow: 0 0 20px rgba(106,27,193,.5);
+		.transition;
+		&:hover {
+			background: lighten(rgba(129,87,181,1),4%);
+			box-shadow: 0 0 40px rgba(106,27,193,.4);
+		}
+	}
+	&.detail {
+		.rotate(@deg: 3deg);
+		top: 40px;
+		right: -20px;
+		background: url(../../img/guardian.png) center top no-repeat #1b1a29;
+		.infos {
+			z-index: 1;
+			position: absolute;
+			bottom: 15px;
+			left: 0;
+			h1 {
+				text-align: center;
+				font-style: italic;
+				.mosk900;
+				text-transform: uppercase;
+				font-size: 1.9em;
+				letter-spacing: -.5px;
+				line-height: 25px;
+				margin: 0 0 15px;
+			}
+			.timing {
+				text-align: center;
+				padding: 0 0 15px;
+				span {
+					color: #444263;
+					font-size: 1em;
+					font-weight: 900;
+					&:nth-of-type(1) {
+						margin-right: 15px;
+						&:before {
+							font-size: 1em;
+							top: 0;
+							left: 0;
+						}
+					}
+					&:before {
+						font-size: 1.2em;
+						margin-right: 4px;
+						position: relative;
+						top: 2px;
+						left: 4px;
+					}
+				}
+			}
+			p {
+				width: 80%;
+				margin: auto;
+				padding-bottom: 15px;
+				font-size: 1em;
+				letter-spacing: .3px;
+				line-height: 1.15em;
+				.mosk200;
+			}
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: -200px;
+				left: 0;
+				right: 0;
+				bottom: 120px;
+				.linear-gradient(
+					@begin: rgba(27,26,41,0),
+					@end: rgba(27,26,41,1),
+					@middle: rgba(27,26,41,1),
+					@switch : 90%
+				);
+				z-index: -1;
+			}
+		}
+	}
+}
+
+@import "../../../../styles/css/rwd.css";

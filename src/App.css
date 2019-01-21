@@ -13,10 +13,11 @@ p { line-height: 20px }
 ul {list-style: none}
 
 
-
+.upe,
 a {
   text-decoration: none;
   color: #12dec6;
+  cursor: pointer;
 }
 
 button {
@@ -60,8 +61,19 @@ strong::selection {
 .pTop { padding-top: 80px }
 @media(min-width: 1140px){
   section {
-    width: 1024px;
+    width: 1000px;
     margin: 0 auto;
     position: relative;
   }
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }

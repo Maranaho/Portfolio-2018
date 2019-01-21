@@ -1,4 +1,4 @@
-main.homeBGVidCtn {
+#header main.homeBGVidCtn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,3 +6,22 @@ main.homeBGVidCtn {
 }
 
 .homeBGVid { transition: .2s ease 0 }
+
+#header,#presentation { position: relative }
+.scrollHeader {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+}
+.scrollHeader button {
+  background: linear-gradient(to right, #09fddf , #3cdcff);
+  border-radius: 100px;
+  padding: 10px 70px;
+  color: #fff;
+  border: none;
+  font-family: 'xtra';
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

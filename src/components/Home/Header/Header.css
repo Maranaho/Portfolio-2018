@@ -27,6 +27,7 @@
   font-size: 12px;
   margin-top: 30px;
   position: relative;
+  display: inline-block;
 }
 #header h3 span,
 #header h3 strong {

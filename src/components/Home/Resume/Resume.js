@@ -11,8 +11,8 @@ import './Resume.css'
 
 class Resume extends Component {
 
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
       pro:true,
       resizeTimer: null,
@@ -141,6 +141,7 @@ handleMouseWheel(e){
           active={this.state.pro}
           first={this.state.first}
           last={this.state.last}/>
+          <span className="upe" onClick={this.props.scrollTo} idx="2">Back up to the synths &#8593;</span>
        </section>
 
        <section

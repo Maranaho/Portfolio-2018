@@ -53,7 +53,7 @@ class Illustrations extends Component {
     lastFewItems = this.lastFewItems();
 
     if (p >= -(s.listWidth - lastFewItems)) {
-      let move = s.pos + -e.deltaY
+      let move = s.pos + -e.deltaY;
       if (s.hasScroll) {
         if (p < 50  || e.deltaY === 100) {
           if (move > 50) {move = 50}
@@ -136,7 +136,7 @@ class Illustrations extends Component {
                 name={i.name}/>
               )
           })}
-          <li><button onClick={()=>this.setState({pos:50,itm1st:true,itmlast:false})}>Go back</button></li>
+          <li><button onClick={()=>this.setState({pos:50,itm1st:true,itmlast:false})}>←Go back</button></li>
         </ul>
         <p className="imageDescription">{s.description}</p>
       </main>

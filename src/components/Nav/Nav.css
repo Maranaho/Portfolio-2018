@@ -1,15 +1,17 @@
-section#nav {
+main#nav {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1;
 }
-nav { margin: 0 auto }
+nav {
+  margin: 0 auto;
+  width: 1000px;
+}
 nav ul {
   display: flex;
   list-style: none;
-  justify-content: flex-end;
   padding: 20px 0;
 }
 
@@ -17,14 +19,10 @@ nav li a {
   padding: 0 15px;
   color: #2d343b;
   transition: .2s ease;
-  font-size: 10px;
+  font-size: 9px;
   text-transform: uppercase;
 }
-nav li:last-child a {padding-right: 0 }
+nav li:first-child a {padding-left: 0 }
 nav li a:hover { color: #12dec6 }
-section#nav.top nav li a:hover,
-section#nav.top nav li a {color: rgba(255,255,255,.8)}
-
-@media (min-width:1000px){
-  nav{width: 1000px}
-}
+main#nav.top nav li a:hover,
+main#nav.top nav li a {color: rgba(255,255,255,.8)}

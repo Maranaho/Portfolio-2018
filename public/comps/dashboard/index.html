@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dashboard</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500" rel="stylesheet"><!--Roboto-->
+<link href="https://file.myfontastic.com/NsbvwSqtbZyYe2FvP2LNmg/icons.css" rel="stylesheet"><!--Icons-->
+<link rel="stylesheet" href="styles/css/style.css">
+</head>
+<body>
+
+    <main>
+        <section>
+            <div class="tile trend">
+                <h1>June 2017</h1>
+                <h3>Code fluctuation</h3>
+                <!--<button class="nav chat-back">Prv</button>
+                <button class="nav chat-nxt">Nxt</button>-->
+
+                <canvas id="trend" width="607" height="350"></canvas>
+            </div><!--END tile-->
+        </section>
+        <section>
+            <article>
+                <div class="tile skills">
+                    <h2>Skills Repartition</h2>
+
+                    <canvas id="radar" width="300" height="200"></canvas>
+
+                    <ul class="legend">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JS</li>
+                    </ul>
+                </div><!--END tile-->
+                <div class="tileContainer">
+                    <div class="tile ninja">
+                        <h2>Ninja rate</h2>
+                        <p><span id="ninja_rate">65</span><sup>%</sup></p>
+                        <canvas id="pie" width="120" height="120"></canvas>
+                    </div><!--END tile-->
+                    <div class="tile pick">
+                        <h2>Pick your skills</h2>
+                        <ul>
+                            <li class="selected" data-skill="ps">PS</li>
+                            <li data-skill="ht">HTML5</li>
+                            <li data-skill="cs">CSS3</li>
+                            <li data-skill="ls">LESS</li>
+                            <li class="selected" data-skill="jq">JQUERY</li>
+                            <li class="selected" data-skill="js">JS</li>
+                            <li data-skill="ng">ANGULAR</li>
+                            <li data-skill="c4d">CINEMA 4D</li>
+                            <li data-skill="ai">AI</li>
+                            <li class="selected" data-skill="zb">ZBRUSH</li>
+                            <li data-skill="oc">OCTANE</li>
+                        </ul>
+                    </div><!--END tile-->
+                </div><!--END tileContainer-->
+            </article>
+            <article>
+                <div class="tile evolution">
+                    <h2>Evolution</h2>
+                    <canvas id="evolution" width="200" height="120"></canvas>
+                </div><!--END tile-->
+                <div class="tile today">
+                    <h2>Today</h2>
+                    <h3>18/06/2017</h3>
+                    <canvas id="today" width="180" height="230"></canvas>
+                </div><!--END tile-->
+            </article>
+        </section>
+    </main>
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--jQ-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script><!--Head JS-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script><!--chart.js-->
+<script type="text/javascript" src="js/charts.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</html>

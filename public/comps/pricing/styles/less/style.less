@@ -1,0 +1,227 @@
+// out: ../css/style.css, sourcemap: false, compress: false
+
+@import "mixin.less";
+
+html,
+body {
+  height: 100%;
+  font-size: 12px;
+}
+.clear {
+  clear: both;
+}
+a,
+button,
+a:hover,
+*:active,
+*:focus,
+*:selected,
+*:visited {
+  outline: none !important;
+  border: none;
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'mosk700';
+  src: url('../../../../fonts/mosk/MoskBold700.eot');
+  src: url('../../../../fonts/mosk/MoskBold700.eot?#iefix') format('embedded-opentype'),
+   url('../../../../fonts/mosk/MoskBold700.ttf') format('truetype');
+  font-style: normal;
+}
+.mosk700 {
+  font-family: 'mosk700';
+  font-weight: normal;
+}
+svg {
+  position: absolute;
+  z-index: 0;
+  width: 300px;
+  height: 600px;
+}
+.ff svg {
+  top: -1px;
+}
+svg path {
+  fill: #fff;
+}
+.logo {
+  display: none;
+}
+.pricing {
+  background: #eee;
+}
+.pricing section {
+  width: 940px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+}
+.pricing figure {
+  width: 300px;
+  height: 600px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pricing h2 {
+  font-family: 'mosk700';
+  font-weight: normal;
+  font-size: 8em;
+  color: #353535;
+  letter-spacing: inherit;
+  padding: 20px 0 5px;
+  line-height: .8em;
+}
+.pricing h2 span {
+  color: #457fb3;
+}
+.pricing h3 {
+  font-family: 'mosk700';
+  font-weight: normal;
+  width: 590px;
+  font-size: 3em;
+  color: #353535;
+  letter-spacing: inherit;
+  padding-bottom: 20px;
+  text-align: right;
+  position: relative;
+  left: 4px;
+  top: -2px;
+  line-height: 1em;
+}
+.pricing .single {
+  width: 300px;
+  height: 650px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 0px rgba(150, 150, 150, 0);
+  border-radius: 2px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.pricing .single:hover {
+  box-shadow: 0 0 40px rgba(150, 150, 150, 0.22);
+  /*.txt {background: url(../../img/pricing_sprite.gif) 0 0 no-repeat;}*/
+}
+.pricing .single .txt {
+  background: url(../../img/pricing_sprite.png) 0 -20px no-repeat;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #457fb3;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  font-family: 'mosk700';
+  font-weight: normal;
+}
+.pricing .single .txt h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.7em;
+  color: #457fb3;
+  padding: 270px 0 40px;
+}
+.pricing .single .txt li {
+  color: rgba(145, 145, 145, 0.9);
+  font-family: 'mosk700';
+  font-weight: normal;
+  font-size: .9em;
+  text-align: left;
+  width: 60%;
+  margin: 0 auto 13px;
+  line-height: 1em;
+  letter-spacing: 1px;
+}
+.pricing .single .txt li:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 12px;
+  margin-right: 7px;
+  background: url(../../img/sprite.png) -85px -140px no-repeat;
+}
+.pricing .single .txt p {
+  font-size: 1em;
+  line-height: 0;
+  padding: 40px 0 70px;
+}
+.pricing .single .txt p strong {
+  font-size: 5.7em;
+  letter-spacing: -4px;
+  vertical-align: top;
+  margin-right: 4px;
+}
+.pricing .single .txt button {
+  border: 1px solid #457fb3;
+  border-radius: 2px;
+  padding: 10px 50px;
+  color: #457fb3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .8em;
+  background: none;
+  cursor: pointer;
+}
+.pricing .single .txt ul,
+.pricing .single .txt p,
+.pricing .single .txt button {
+  transform: translatey(0px);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  opacity: 0;
+}
+.pricing .single .txt:hover ul,
+.pricing .single .txt:hover p,
+.pricing .single .txt:hover button {
+  opacity: 1;
+}
+.pricing .single .txt:hover ul {
+  animation: translate .4s;
+}
+.pricing .single .txt:hover p {
+  animation: translate .5s;
+}
+.pricing .single .txt:hover button {
+  animation: translate .6s;
+}
+.pricing .single.basic .txt {
+  margin-left: 0;
+}
+.pricing .single.essentiel .txt {
+  background-position: -278px -20px;
+}
+.pricing .single.premium .txt {
+  background-position: -577px -20px;
+}
+@-webkit-keyframes translate {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(5px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+
+@import "../../../../styles/css/rwd.css";
