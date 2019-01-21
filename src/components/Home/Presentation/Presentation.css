@@ -19,6 +19,11 @@
   letter-spacing: -1px;
 }
 
+@media(min-width:1140px){
+
+  #presentation h2 span{line-height: 60px}
+}
+
 /*#presentation h2 span:nth-last-of-type(1) { transform: translateX(-260px)}*/
 /*#presentation h2 strong {
   font-family: 'holiday';
