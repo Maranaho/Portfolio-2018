@@ -13,6 +13,7 @@ import Mapster from './Prototypes/Mapster'
 import Chat from './Prototypes/Chat'
 import Guardians from './Prototypes/Guardians'
 import Pricing from './Prototypes/Pricing'
+import MTD from './Prototypes/MTD'
 
 class Main extends Component {
 
@@ -37,6 +38,7 @@ componentDidMount() {
           <Route exact path="/prototypes/guardians" component={Guardians} />
           <Route exact path="/prototypes/mapster" component={Mapster} />
           <Route exact path="/prototypes/chat" component={Chat} />
+          <Route exact path="/prototypes/mtd" component={MTD} />
         </Switch>
         <Footer/>
       </main>

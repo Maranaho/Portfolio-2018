@@ -107,6 +107,7 @@ img {width:100%}
 #nav.price ul {justify-content: flex-end}
 #nav.mapster ul li a,
 #nav.dash ul li a{color: #fff}
+#nav.mtd {display: none}
 
 
 .mapster .prototypeNav a,

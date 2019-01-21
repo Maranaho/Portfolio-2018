@@ -1,0 +1,46 @@
+
+/*Geo*/
+@font-face {
+    font-family: 'geo';
+    src: url('../fonts/geo/geogrotesque-500.woff') format('woff'),
+        url('../fonts/geo/geogrotesque-500.woff2') format('woff2');
+        font-weight: 100;
+}
+
+/*Avenir*/
+@font-face {
+    font-family: 'avenir_rg';
+    src: url('../fonts/avenir/AvenirNextforINTUITW05-Rg.woff') format('woff'),
+        url('../fonts/avenirAvenirNextforINTUITW05-Rg.woff2') format('woff2');
+        font-weight: 100;
+}
+
+
+@font-face {
+    font-family: 'avenir_md';
+    src: url('../fonts/avenir/AvenirNextforINTUITW05-Md.woff') format('woff'),
+        url('../fonts/avenirAvenirNextforINTUITW05-Md.woff2') format('woff2');
+        font-weight: 400;
+}
+
+
+@font-face {
+    font-family: 'avenir_demi';
+    src: url('../fonts/avenir/AvenirNextforINTUITW05-Demi.woff') format('woff'),
+        url('../fonts/avenirAvenirNextforINTUITW05-Demi.woff2') format('woff2');
+        font-weight: 500;
+}
+
+
+@font-face {
+    font-family: 'avenir_bold';
+    src: url('../fonts/avenir/AvenirNextforINTUITW05-Bold.woff') format('woff'),
+        url('../fonts/avenirAvenirNextforINTUITW05-Bold.woff2') format('woff2');
+        font-weight: 900;
+}
+@font-face {
+    font-family: 'avenir_heavy';
+    src: url('../fonts/avenir/AvenirNextforINTUIT-Heavy.woff') format('woff'),
+        url('../fonts/avenirAvenirNextforINTUIT-Heavy.woff2') format('woff2');
+        font-weight: 900;
+}

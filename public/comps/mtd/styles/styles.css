@@ -1,0 +1,351 @@
+body {
+  font-family: 'avenir_rg';
+  font-size: 16px;
+  background: #f5f6fa;
+  color: #333;
+  margin: 0;
+}
+
+.hidden{display: none}
+
+
+
+h1 {
+  font-family: 'geo';
+  font-weight: 100;
+  font-size: 23px;
+  margin: 10px 0;
+}
+h2 {
+  margin: 0;
+  font-family: 'avenir_demi';
+  font-weight: 400;
+  font-size: 23px;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+button { cursor: pointer }
+
+.imgCtn {
+  text-align: center;
+  padding: 100px 0 20px;
+}
+
+#MTD article {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #e5e7ec;
+  border-radius: 3px;
+}
+#MTD {flex:1}
+
+label {
+  font-family: 'avenir_demi';
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.inputCtn {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+input {
+  padding: 7px 10px;
+  border: 1px solid rgba(134, 135, 142, .4);
+}
+
+.help {
+  background: url('../img/help.svg') no-repeat rgba(255,255,255,0) center center;
+  border: none;
+  width:22px;
+  height:22px;
+  font-size: 0;
+  margin-left: 5px;
+  transition: all .3s ease;
+  position: relative;
+  outline: none;
+}
+
+
+.tooltip {
+  position: absolute;
+  padding: 20px;
+  background: linear-gradient(#474747 ,#343434);
+  top: -110px;
+  left: -95px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 17px;
+  width: 180px;
+  text-align: left;
+  border-radius: 5px;
+  cursor: text;
+  transition: .5s ease;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+.help:hover .tooltip{
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 95px;
+  bottom: -5px;
+  transform: rotate(45deg);
+  background: #343434;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #e5e7ec;
+  margin: 20px 0;
+}
+
+
+.btnCtn {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+.cta {
+  padding: 7px 40px;
+  font-family: 'avenir_demi';
+  font-size: 14px;
+  border-radius: 3px;
+  border: none;
+  background: #32a226;
+  color: #fff;
+  transition: background .4s ease;
+  opacity: 1;
+}
+
+.cta[disabled] {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.cta:not([disabled]):not(.cta_shallow):hover { background: #52b548 }
+
+.cta.cta_shallow {
+  background: #fff;
+  box-shadow: 0 0 1px #171719;
+  color: #333;
+}
+#dismiss,
+#close {
+  background: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  font-size: 0;
+  position: relative;
+  outline: none;
+  transition: .3s ease;
+  transform: rotate(0deg);
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+#dismiss:before,
+#dismiss:after,
+#close:before,
+#close:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: rgb(192, 193, 197);
+  position: absolute;
+  top: 23px;
+  left: 12px;
+  transition: 0.7s cubic-bezier(0, 0.13, 0.06, 1.39) .1s;
+  transform: rotate(0deg);
+  cursor: pointer;
+  outline: none;
+  border-radius: 20px;
+}
+.vtNm {position: relative}
+#headsUp {
+  position: absolute;
+  white-space: nowrap;
+  top: -5px;
+  left: 0;
+  font-size: 15px;
+  transition: .5s ease;
+  margin: 0;
+  color: #e64141;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#headsUp.invisible {
+  transform: translateY(15px);
+  opacity: 0;
+}
+#headsUp.valid { color: #26ae0c }
+#dismiss:before,
+#close:before { transform: rotate(45deg) }
+#dismiss:after,
+#close:after { transform: rotate(-45deg) }
+.vatt,
+.vatCtn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.vatCtn { margin: 20px 0}
+.vatt {align-items: center }
+#bigCheck {height: 50px}
+#vat_number {
+  font-size: 40px;
+  font-family: 'avenir_heavy';
+  letter-spacing: -1px;
+  margin: 5px 0;
+  height: 50px;
+}
+
+.company_details {
+  padding-top: 2px;
+}
+.company_details p{ margin:10px 0 0 0 }
+.company_details p br {display: none}
+
+
+@-webkit-keyframes blinker {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+
+.blinker:after {
+  content:"";
+  animation-name: blinker;
+  animation-duration: 0.4s;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  display: inline-block;
+  height: 40px;
+  width: 2px;
+  background: rgba(171, 173, 181, 1);
+  transform: translate(3px,6px);
+}
+#vat_number.done:after {display: none}
+
+#customerInfo {
+  border-top: 1px solid #e5e7ec;
+  transition: .5s cubic-bezier(0.93, 0.04, 0.18, 0.99);
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+#customerInfo.opac { opacity: 0 }
+#customerInfo.show {
+  padding-top: 30px;
+  height: 190px;
+  margin-top: 20px;
+}
+
+#checkFormat {
+  padding: 5px 30px 5px 0;
+  text-align: right;
+  background: url('../img/nope.svg') no-repeat right center;
+  background-size: auto 80%;
+}
+#checkFormat.good {
+  background: url('../img/check.svg') no-repeat right center;
+  background-size: auto 19px;
+}
+
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,.9);
+  z-index: 20;
+  height: 100%;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .6s ease;
+}
+
+
+#modal section {
+  margin-top: 70px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 0 30px 50px rgba(171, 173, 195, 0.2);
+  padding: 50px;
+  border: 1px solid rgba(229, 231, 236, 0.4);
+  border-radius: 10px;
+  position: relative;
+  transition: transform .6s ease;
+  transform: translateY(15px);
+}
+#modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+#modal.show section{transform: translateY(0)}
+
+
+#dismiss {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.imgCc {
+  text-align: center;
+}
+.imgCc img { width: 100px }
+
+#modal h2 {
+  text-align: center;
+  font-family: 'geo';
+  font-size: 35px;
+  letter-spacing: -1px;
+  padding: 20px 0 10px;
+}
+#modal p {
+  font-family: 'avenir_md';
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+  padding-bottom: 60px;
+}
+
+
+
+@media(min-width: 1130px){
+  #MTD {
+    width: 690px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  header, section {
+    width: 1130px;
+    margin: 0 auto;
+  }
+}
