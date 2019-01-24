@@ -39,6 +39,7 @@ componentDidMount() {
           <Route exact path="/prototypes/mapster" component={Mapster} />
           <Route exact path="/prototypes/chat" component={Chat} />
           <Route exact path="/prototypes/mtd" component={MTD} />
+          <Route component={Home} />
         </Switch>
         <Footer/>
       </main>
