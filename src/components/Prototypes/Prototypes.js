@@ -11,7 +11,7 @@ const Prototypes = () => (
           <h1 className="xtra">JSX'periments</h1>
           <p>So here's what I love to do, experimenting.</p>
           <p>JavaScript is not just for CS people, it's a fun language and I want more designers to try it. Being able to technically bring your design ideas to real life is not only very satisfying, it also unlocks your creativity.</p>
-          <ul>
+          {/* <ul>
             <li><button>JavaScript</button></li>
             <li><button>CSS</button></li>
             <li><button>React Native</button></li>
@@ -27,7 +27,7 @@ const Prototypes = () => (
             <li><button>Cinema 4D</button></li>
             <li><button>ZBrush</button></li>
             <li><button>Octane</button></li>
-          </ul>
+          </ul> */}
         </div>
       </section>
     </main>

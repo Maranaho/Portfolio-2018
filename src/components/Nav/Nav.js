@@ -8,7 +8,6 @@ const Nav = (p) => (
         <li><Link to="/">Home</Link></li>
         <li><Link to="/prototypes">JSXperiments</Link></li>
         <li><Link to="/illustrations">Illustrations</Link></li>
-        <li><Link to="/github">Github</Link></li>
       </ul>
     </nav>
   </main>
