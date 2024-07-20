@@ -1,6 +1,7 @@
 const Images = [
-  {name:'bulk',ratio:1,title:'Desrption',format:'jpg'},
-  {name:'fixie',ratio:.9,title:'Desrption',format:'png'},
+  {name:'spacewalker',ratio:.95,title:'Desrption',format:'png'},
+  {name:'fixie',ratio:1,title:'Desrption',format:'png'},
+  {name:'bulk',ratio:.9,title:'Desrption',format:'jpg'},
   {name:'ui',ratio:.95,title:'Desrption',format:'png'},
   {name:'canap',ratio:.9,title:'Desrption',format:'png'},
   {name:'astronaut',ratio:1,title:'Desrption',format:'png'},
@@ -10,7 +11,7 @@ const Images = [
   {name:'lebron',ratio:.9,title:'Desrption',format:'png'},
   {name:'miller',ratio: 1,title:'Desrption',format:'png'},
   {name:'porzingis',ratio:.8,title:'Desrption',format:'png'},
-  //{name:'westbrook',ratio:.5,title:'Desrption',format:'png'},
+  {name:'westbrook',ratio:.5,title:'Desrption',format:'png'},
   {name:'michaelleague',ratio:1,title:'Desrption',format:'png'},
   {name:'moose',ratio:.7,title:'Desrption',format:'jpg'},
   {name:'poker',ratio:.9,title:'Desrption',format:'png'},

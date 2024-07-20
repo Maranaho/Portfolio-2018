@@ -48,7 +48,7 @@ main.illus {
   cursor: pointer;
 }
 .NextPrv button[disabled] {
-  opacity: .2;
+  opacity: 0;
   cursor: not-allowed;
 }
 .NextPrv button#prv { left: 60px }
